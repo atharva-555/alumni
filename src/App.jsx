@@ -7,10 +7,11 @@ import { ErrorBoundary } from 'react-error-boundary'
 import ErrorPage from "./Pages/Error/ErrorPage.jsx"
 import Loading from "./Components/UI/LoadingComponent/Loading.jsx"
 import ErrorFallback from "./ErrorFallback";
+import Layout from './Layout/Layout.jsx'
 import './App.css'
 
 // Lazy Loading compoments
-const Layout = lazy(() => import("./Layout/Layout.jsx"));
+// const Layout = lazy(() => import("./Layout/Layout.jsx"));
 const Home = lazy(()=> import("./Pages/Home/Home.jsx"))
 
 
@@ -21,8 +22,9 @@ function App() {
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Suspense fallback={<Loading/>}>
         <Routes>
-          <Route path="/" element={<Layout />} errorElement={<ErrorPage />}/>
-          <Route index element={<Home />} />
+          <Route path="/" element={<Layout/>} errorElement={<ErrorPage />}>
+            <Route index element={<Home />} />
+          </Route>
         </Routes>
       </Suspense>
     </ErrorBoundary>
