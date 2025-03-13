@@ -1,9 +1,11 @@
-header{background: #831619;}
+header{background: var(--theme-red);}
+header  .nav-logo{max-width: 125px;}
+header .part1 a{text-decoration: none;color: #fff;font-size: 2rem;}
 
 /* .nav{padding: 5px;color: white;text-decoration: none;} */
 .part2 ul{display: flex;}
-.part2 ul li { padding: 0 10px;}
-.part2 ul li a{ padding: 8px 15px; border-radius: 4px;font-size: 16px; color: white;text-decoration: none;}
+.part2 ul li { padding: 0 10px;font-weight: 700;}
+.part2 ul li a{ padding: 8px 15px; border-radius: 4px;font-size: 16px; color: white;text-decoration: none;text-transform: capitalize;}
 .part2 ul li a:hover{background:var(--btnBg);color:var(--secondary-color);}
 .part2 ul li a.active{ background: var(--btnBg);color: var(--secondary-color);}
 .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) ;border: 1px solid var(--btnBg) ;}

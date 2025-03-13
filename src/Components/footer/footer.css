@@ -1,0 +1,12 @@
+footer{background-color: var(--theme-dark);color: #fff;}
+
+footer .footer-logo{max-width: 150px;}
+footer h3{color: #fff;font-weight: 400;font-size: 22px;font-family:  "Istok Web", sans-serif;text-align: center;}
+
+
+footer  .heading h2{font-size: 28px;font-weight: 700;color:#fff;margin-bottom: 4px;}
+footer  .heading p{font-size: 20px;font-weight: 400;}
+
+footer .part1,.part2,.part3,.part4{padding: 0px 45px!important;}
+
+/* footer .part2,.mapImg{max-height: 125px;} */
