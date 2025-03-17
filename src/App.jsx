@@ -13,6 +13,7 @@ import './App.css'
 // Lazy Loading compoments
 // const Layout = lazy(() => import("./Layout/Layout.jsx"));
 const Home = lazy(()=> import("./Pages/Home/Home.jsx"))
+const Yearbook = lazy(()=> import("./Pages/Yearbook/Yearbook.jsx"))
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout/>} errorElement={<ErrorPage />}>
             <Route index element={<Home />} />
+            <Route path="/yearbook" element={<Yearbook />} />
           </Route>
         </Routes>
       </Suspense>
