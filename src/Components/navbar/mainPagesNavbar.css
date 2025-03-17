@@ -32,6 +32,8 @@ header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) 
     header .part1{width: 60%;}
 
     header .part2 {width: 40%;text-decoration: none;color: #fff;}
-    header .part2 .signinBtn{font-size:1.3rem;text-transform: uppercase;font-weight: 600;}
+    header .part2 .signinBtn{font-size:1.3rem;text-transform: uppercase;font-weight: 600;justify-content: end;}
     header .part2 .navbarToggle{  justify-content: flex-end;}
+
+    footer{padding: 0 30px;}
   }

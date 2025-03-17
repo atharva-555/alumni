@@ -37,3 +37,12 @@ footer .heading a{color: #fff;text-decoration: none;}
 
     
   }
+
+@media only screen and (max-width: 778px) {
+
+   
+    footer .part2,.part3,.part4{padding: 20px!important;}
+    footer .part1 { max-width: 100% !important;padding: 5px!important;flex-direction: row!important;}
+    footer .part3 .heading p{padding-top: 10px;}
+
+}

@@ -62,5 +62,9 @@ font-weight: 700;text-transform: uppercase;font-family: "Poppins", sans-serif;fo
   @media only screen and (max-width:778px) {
     .floatTitle{width: 60%!important;left: 8%!important;padding: 20px 30px!important;}
     .shortDesc{transform: translateY(-30%);}
+    .ctaWrap{flex-direction: column;}
+
+    .imageShowcaseWrapper p{font-size: 28px;line-height:30px ;transform: translateY(-30px);padding-left: 2px; }
+
   }
 

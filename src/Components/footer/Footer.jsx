@@ -13,14 +13,14 @@ const Footer = () => {
     <footer>
       <div className="row px-2 footerWrapper d-flex justify-content-center">
 
-        <div className="col-3 d-flex flex-column justify-content-center align-items-center part1">
+        <div className="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center part1">
           <div className="footer-logo"><img src={Logo} alt="" /></div>
           <div className="clgName">
             <h3>Padmabhooshan Vasantdada Patil Institute of Technology</h3>
           </div>
         </div>
 
-        <div className="col-3 part2 ">
+        <div className="col-12 col-md-3 part2 ">
           <div className="heading">
             <h2 className='px-2'>Address</h2>
             <hr style={{ border: "2px solid white", width: "100%" ,opacity:1,margin:'0',marginBottom:'5px'}} />
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="col-3 part3 ">
+        <div className="col-12 col-md-3  part3 ">
           <div className="heading">
               <h2 className='px-2'>Connect with Us</h2>
               <hr style={{ border: "2px solid white", width: "100%" ,opacity:1,margin:'0',marginBottom:'5px'}} />
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="col-3 part4 ">
+        <div className="col-12 col-md-3  part4 ">
           <div className="heading">
               <h2 className='px-2'>Contact Us</h2>
               <hr style={{ border: "2px solid white", width: "100%" ,opacity:1,margin:'0',marginBottom:'5px'}} />

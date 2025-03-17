@@ -70,9 +70,9 @@ const MainPagesNavbar = () => {
             <Link to='/' className=' d-flex justify-content-flex-start align-items-center'><img className="nav-logo" alt="" src={Logo}/>PVPIT CONNECT</Link>
           </div>
           <div className=" d-flex align-items-center justify-content-center part2 m-auto">
-            <div className="signinBtn  ">Sign In</div>
+            <div className="signinBtn d-flex ">Sign In</div>
 
-            <span><div className=' navbarToggle' onClick={openMenu}><MenuRoundedIcon/></div></span>
+            <span><div className=' navbarToggle d-flex justify-content-center' onClick={openMenu}><MenuRoundedIcon/></div></span>
             {/* <ul className="d-flex justify-content-center align-items-center">
               <li className=""><Link to ="/" >Home</Link></li>
               <li className=""><Link to ="yearbook" >Community</Link></li>

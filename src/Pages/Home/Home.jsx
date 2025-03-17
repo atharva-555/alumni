@@ -39,26 +39,26 @@ const Home = () => {
     </div>
 
     <div className="ctaWrapper">
-      <div className="row px-5 py-3">
-        <div className="col-3 d-flex flex-column justify-content-center align-items-center px-4  h-100">
+      <div className="row px-5 py-3 ctaWrap">
+        <div className="col d-flex flex-column justify-content-center align-items-center px-4  h-100">
           <span ><ArticleOutlinedIcon className='ctaIcon'/></span>
           <h3>NewsLetter</h3>
           <p>Take a look at the past and upcoming  events, as well as testimonials and more.</p>
         </div>
 
-        <div className="col-3 d-flex flex-column justify-content-center align-items-center px-4 h-100">
+        <div className="col d-flex flex-column justify-content-center align-items-center px-4 h-100">
           <span ><WorkspacePremiumOutlinedIcon className='ctaIcon'/></span>
           <h3>ALUMNI DIRECTORY</h3>
           <p>Our Alumni have distinguished themselves in various walks of life</p>
         </div>
 
-        <div className="col-3 d-flex flex-column justify-content-center align-items-center px-4 h-100">
+        <div className="col d-flex flex-column justify-content-center align-items-center px-4 h-100">
           <span ><GroupsIcon className='ctaIcon'/></span>
           <h3>ALUMNI  BODY</h3>
           <p>Take a glimpse at the people working behind the scenes</p>
         </div>
 
-        <div className="col-3 d-flex flex-column justify-content-center align-items-center px-4 h-100">
+        <div className="col d-flex flex-column justify-content-center align-items-center px-4 h-100">
           <span ><AccountCircleIcon className='ctaIcon'/></span>
           <h3>CONNECT</h3>
           <p>Sign In or Sign Up into our portal</p>
@@ -67,7 +67,7 @@ const Home = () => {
     </div>
 
     <div className="tpoDescWrapper row">
-      <div className="col-4">
+      <div className="col-12 col-md-4">
         {/* <span className='imgBG'><img src={tpoImg} alt="" /></span> */}
         <div className="profile-container">
             <img src={tpoImg} alt="Profile" className="profile-img"/>
@@ -78,7 +78,7 @@ const Home = () => {
         
       </div>
 
-      <div className="col-8">
+      <div className="col-12 col-md-8">
         <h3 className='py-5'>Dear torch- bearers of PVPIT:</h3>
         <br />
         <p>Life at PVPIT doesn’t end after you graduate; in fact, it continues, grows and thrives. As an alumnus of PVPIT, each one of you is the brand ambassador of your alma mater. Your brilliance in the professional paths you have chosen to follow as well as a responsible citizen of this country (and/or globe), and moreover as a good human being articulates the pride of our institute. The magnificent examples set by you continue to inspire students to achieve even greater milestones.
