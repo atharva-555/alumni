@@ -6,6 +6,8 @@ import Logo from '../../assets/images/Logo.svg'
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 const MainPagesNavbar = () => {
 
@@ -34,6 +36,7 @@ const MainPagesNavbar = () => {
        // Responsive Open menu
     const [isOpenMenu,setisOpenMenu]=useState(false);
     const openMenu=()=>{
+      console.log("triggered");
         setisOpenMenu(true);
     }
 
@@ -63,16 +66,19 @@ const MainPagesNavbar = () => {
 
 
   return (
+    
     <header>
+      
       { windowWidth <= 778 && 
-        <div className = " p-2 px-4 d-flex flex-row m-0">
+      <>
+        <div className = " p-2  d-flex flex-row m-0 part1Wrapper">
           <div className = " d-flex justify-content-flex-start align-items-center part1 m-auto">
             <Link to='/' className=' d-flex justify-content-flex-start align-items-center'><img className="nav-logo" alt="" src={Logo}/>PVPIT CONNECT</Link>
           </div>
           <div className=" d-flex align-items-center justify-content-center part2 m-auto">
             <div className="signinBtn d-flex ">Sign In</div>
 
-            <span><div className=' navbarToggle d-flex justify-content-center' onClick={openMenu}><MenuRoundedIcon/></div></span>
+            <span ><div className=' navbarToggle d-flex justify-content-center' onClick={openMenu}><MenuRoundedIcon/></div></span>
             {/* <ul className="d-flex justify-content-center align-items-center">
               <li className=""><Link to ="/" >Home</Link></li>
               <li className=""><Link to ="yearbook" >Community</Link></li>
@@ -84,6 +90,30 @@ const MainPagesNavbar = () => {
           </div>
       
       </div>
+
+      <nav className={`navbarOverlay ${isOpenMenu===true ? 'activeDark' : ''}`}>
+        <div className={`sliderNavWrapper ${isOpenMenu===true ? 'open' : ''}`}>
+              {/* <ClickAwayListener onClickAway={()=>setIsOpenDropdown(false)}> */}
+              <div className='row p-4 pb-0'><span><CloseRoundedIcon onClick={()=>setisOpenMenu(false)}/></span></div>
+                  <ul className="list list-inline mt-3">
+                    <li className="list-inline-item  px-4 py-2">
+                      <Link to={'/'}><span className='icon'><HomeOutlinedIcon/></span>Home</Link>
+                    </li>
+                    <li className="list-inline-item px-4 py-2">
+                      <Link to={'/'}><span className='icon'><HomeOutlinedIcon/></span>Home</Link>
+                    </li>
+                    <li className="list-inline-item px-4 py-2">
+                      <Link to={'/'}><span className='icon'><HomeOutlinedIcon/></span>Home</Link>
+                    </li>
+                    <li className="list-inline-item px-4 py-2">
+                      <Link to={'/'}><span className='icon'><HomeOutlinedIcon/></span>Home</Link>
+                    </li>
+                  </ul>
+          
+          </div>
+        </nav>
+
+      </>
 }
 
 {windowWidth > 778 && 

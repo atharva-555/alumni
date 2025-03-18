@@ -1,12 +1,12 @@
 import React from 'react'
 import './home.css'
-import mainGateImg from '../../assets/images/mainGate.png'
-import ConvocationImg from '../../assets/images/convocation.png'
+import mainGateImg from '../../assets/images/mainGate_compressed.png'
+import ConvocationImg from '../../assets/images/convocation_compressed.png'
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
 import GroupsIcon from '@mui/icons-material/Groups';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import tpoImg from '../../assets/images/tpo.png'
+import tpoImg from '../../assets/images/tpo_compressed.png'
 
 const Home = () => {
   return (
@@ -15,16 +15,15 @@ const Home = () => {
       {/* Image Section - Maintains Original Height */}
       <img src={mainGateImg} alt="PVPIT Alumni" className="w-100 d-block" style={{ height: "auto" }} />
 
-      {/* Maroon Overlay - Positioned Between Image & Description */}
       <div className="position-relative text-white p-5 floatTitle">
-        <p className="mb-1">Home</p><br />
+        <p className="pb-3 hometxt">Home</p>
         <h2 className="fw-bold">Alumni</h2>
         <p className="mb-0">Forging lasting bonds</p>
       </div>
 
       {/* Description Section - Pushes Content Below the Overlay */}
       <div className="container " style={{ position: "relative", zIndex: 1 }}>
-        <p className="text-justify fs-3 shortDesc" style={{ fontFamily: "Arial!important", fontWeight:"700" }}>
+        <p className="text-justify fs-3 shortDesc" style={{ fontFamily: "Arial", fontWeight:"700" }}>
         <strong> At Padmabhooshan Vasantdada Patil Institute of Technology (PVPIT), our endeavor is to create a vibrant intellectual environment that nurtures the free thinker, the pro-active problem solver, the “I’ll do it on my own!” entrepreneur. Their journeys begin at our gates, and we are proud of their successes.</strong>
         </p>
       </div>
@@ -69,18 +68,23 @@ const Home = () => {
     <div className="tpoDescWrapper row">
       <div className="col-12 col-md-4">
         {/* <span className='imgBG'><img src={tpoImg} alt="" /></span> */}
-        <div className="profile-container">
-            <img src={tpoImg} alt="Profile" className="profile-img"/>
+        <div className="profileWrapper">
+          <div className="profile-container">
+              <img src={tpoImg} alt="Profile" className="profile-img"/>
+          </div>
+          <div className="infoWrapper">
+            <h4>Prof. Akash Shrivastava</h4>
+            <p className='text-center designation'>TPO, In-Charge, Alumni Cell</p>
+          </div>
+          
         </div>
-        <br /><br />
-        <h4>Prof. Akash Shrivastava</h4>
-        <p className='text-center designation'>TPO, In-Charge, Alumni Cell</p>
+       
+        
         
       </div>
 
       <div className="col-12 col-md-8">
         <h3 className='py-5'>Dear torch- bearers of PVPIT:</h3>
-        <br />
         <p>Life at PVPIT doesn’t end after you graduate; in fact, it continues, grows and thrives. As an alumnus of PVPIT, each one of you is the brand ambassador of your alma mater. Your brilliance in the professional paths you have chosen to follow as well as a responsible citizen of this country (and/or globe), and moreover as a good human being articulates the pride of our institute. The magnificent examples set by you continue to inspire students to achieve even greater milestones.
         <br />
         Looking forward to more meaningful interactions with you to take the Institute to greater heights with the sky as the limit...</p>
