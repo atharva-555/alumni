@@ -13,15 +13,30 @@ header .part2 ul li .highlight:hover{background-color: var(--theme-red);color: #
 /* .nav{padding: 5px;color: white;text-decoration: none;} */
 header .part2  ul {padding: 0;margin: 0;list-style: none; display: flex;gap: 1rem}
 header .part2 ul li { padding: 0;font-weight: 700;width: auto!important;}
-header .part2 ul li a{ padding: 8px 10px; border-radius: 30px;font-size: 22px; color: white;text-decoration: none;text-transform: capitalize;}
+header .part2 ul li a{ padding: 8px 10px; border-radius: 30px;font-size: 26px; color: white;text-decoration: none;text-transform: capitalize;}
 header .part2 ul li a:hover{background:#fff;color:var(--theme-red);}
-header .part2 ul li a.active{ background: var(--btnBg);color: var(--secondary-color);}
-header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) ;border: 1px solid var(--btnBg) ;}
+/* header .part2 ul li a.active{ background: var(--btnBg);color: var(--secondary-color);}
+header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) ;border: 1px solid var(--btnBg) ;} */
+
+.communityDropdownWrapper,.eventsDropdownWrapper,.aboutDropdownWrapper{flex-direction: column;position: relative;}
+.dropdown{padding: 5px;background-color: #fff;border-radius: 6px;display: flex;flex-direction: column;position: absolute!important;gap: 5px!important;z-index: 2;width: 100%;visibility: hidden;opacity: 0;transition: all 0.3s ease-in-out;top: 120%;}
+.dropdown li{padding: 10px!important;border-radius: 6px!important;}
+.dropdown li:hover{background-color: #f6f6f6;}
+.dropdown a{color: black!important;padding: 0px!important;}
+.dropdown a:hover{background-color: #f6f6f6!important;}
+/* .communityDropdownMenu a:hover{} */
+.DropdownWrapper:hover .dropdown {visibility: visible;opacity: 1;}
+
+
+@media only screen and (max-width:1280px) {
+  header .part2 ul li a{font-size: 20px;padding: 8px 5px;}
+}
 
 @media only screen and (max-width:992px) {
     header  .nav-logo{max-width: 90px;}
     header .part1 a{font-size: 1.7rem;}
-    header .part2 ul li a{ font-size: 20px;padding: 8px 5px;}
+    header .part2 ul li a{ font-size: 19px;padding: 8px 2px;}
+
   }
 
   @media only screen and (max-width:778px) {
@@ -42,10 +57,56 @@ header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) 
     header .navbarOverlay{  position: absolute;background-color: rgba(0, 0, 0, 0.8);opacity: 0;}
     header .activeDark{opacity: 1!important;z-index: 1000;display: block;}
     header .sliderNavWrapper{width: 60%!important;right: -100%;transition: all 0.3s ease-in-out; position: fixed}
-    header .sliderNavWrapper .list-inline-item a{display: flex; align-items: center ;}
+    header .sliderNavWrapper .list-inline-item a{display: flex; align-items: center ;text-decoration: none;color: black;}
     header .sliderNavWrapper .list-inline-item a .icon{width: auto;padding: 5px;}
     header .open{opacity: 1;  z-index: 1000000;display: block;right: 0px;transition: all 0.3s ease-in-out;}
 
+    .dropdown {
+      position: relative!important;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
+    }
+    
+    /* Show dropdown when active */
+    .dropdown.show {
+      max-height: 200px;
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Rotate arrow */
+    .icon.rotate {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .dropdown li {
+      padding: 8px 16px;
+      white-space: nowrap;
+    }
+    
+    .dropdown li:hover {
+      background-color: #f1f1f1;
+    }
+
 
     footer{padding: 0 30px;}
+  }
+
+  @media only screen and (max-width:380px) {
+    header  .nav-logo{max-width: 35px;}
+    header .part2 .signinBtn{font-size:16px;}
+    header .part1 a{font-size: 16px;}
+
+    header .part1{width: 63%;}
+
+    header .part2 {width: 50%;text-decoration: none;color: #fff;}
+    header .part1Wrapper{padding: 10px 8px!important;}
+
   }

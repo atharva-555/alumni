@@ -34,9 +34,9 @@ const Footer = () => {
           <div className="heading">
               <h2 className='px-2'>Connect with Us</h2>
               <hr style={{ border: "2px solid white", width: "100%" ,opacity:1,margin:'0',marginBottom:'5px'}} />
-              <p><Link to='' ><span className='icon d-flex align-items-center'><InstagramIcon/>PVPIT Bavdhan</span></Link></p>
-              <p><Link to='' ><span className='icon d-flex align-items-center'><FacebookIcon/>PVPIT Bavdhan</span></Link></p>
-              <p><Link to='' ><span className='icon d-flex align-items-center'><LinkedInIcon/>Placement Cell</span></Link></p>
+              <p><Link to='https://www.instagram.com/pvpitbavdhan6122?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' ><span className='icon d-flex align-items-center'><InstagramIcon/>PVPIT Bavdhan</span></Link></p>
+              <p><Link to='https://www.facebook.com/pvpitbavdhan/?_rdr' ><span className='icon d-flex align-items-center'><FacebookIcon/>PVPIT Bavdhan</span></Link></p>
+              <p><Link to='https://www.linkedin.com/company/padmabhooshan-vasantdada-patil-institute-of-technology-bavdhan-6122/?originalSubdomain=in' ><span className='icon d-flex align-items-center'><LinkedInIcon/>Placement Cell</span></Link></p>
           </div>
         </div>
 
@@ -46,12 +46,12 @@ const Footer = () => {
               <hr style={{ border: "2px solid white", width: "100%" ,opacity:1,margin:'0',marginBottom:'5px'}} />
               <p className='py-2'>Prof. Ganesh Wayal
                 <br />Head Of Dept. (Computer Dept.)
-                <br/><p><Link to='' ><span className='icon d-flex align-items-center'><CallOutlinedIcon/>+91 8275047372 (Phone)</span></Link></p> 
+                <br/><p><span className='icon d-flex align-items-center'><CallOutlinedIcon/>+91 8275047372 (Phone)</span></p> 
                 Mr. Akash Shrivastava
                 <br />
                 TPO, In-charge, Alumni Cell
                 <br />
-                <p><Link to='' ><span className='icon d-flex align-items-center'><CallOutlinedIcon/>+91 9303683660 (Phone)</span></Link></p> </p>
+                <p><span className='icon d-flex align-items-center'><CallOutlinedIcon/>+91 9303683660 (Phone)</span></p> </p>
           </div>
         </div>
 

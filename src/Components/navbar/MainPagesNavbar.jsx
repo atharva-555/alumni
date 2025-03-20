@@ -8,8 +8,16 @@ import { useRef } from 'react';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import PeopleIcon from '@mui/icons-material/People';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+
 
 const MainPagesNavbar = () => {
+
+  
 
   // Navbar active tab
   const [activeLink, setActiveLink] = useState('home');
@@ -33,7 +41,7 @@ const MainPagesNavbar = () => {
       };
       }, []);
 
-       // Responsive Open menu
+    // Responsive Open menu
     const [isOpenMenu,setisOpenMenu]=useState(false);
     const openMenu=()=>{
       console.log("triggered");
@@ -61,9 +69,15 @@ const MainPagesNavbar = () => {
 
     const closeMenu=()=>{
         setisOpenMenu(false);
+        setOpenDropdown(null);
         
     }
 
+    const [openDropdown, setOpenDropdown] = useState(null);
+
+    const toggleDropdown = (menu) => {
+      setOpenDropdown(openDropdown === menu ? null : menu);
+    };
 
   return (
     
@@ -91,22 +105,60 @@ const MainPagesNavbar = () => {
       
       </div>
 
-      <nav className={`navbarOverlay ${isOpenMenu===true ? 'activeDark' : ''}`}>
-        <div className={`sliderNavWrapper ${isOpenMenu===true ? 'open' : ''}`}>
-              {/* <ClickAwayListener onClickAway={()=>setIsOpenDropdown(false)}> */}
-              <div className='row p-4 pb-0'><span><CloseRoundedIcon onClick={()=>setisOpenMenu(false)}/></span></div>
+      <nav className={`navbarOverlay ${isOpenMenu ? 'activeDark' : ''}`}>
+                <div className={`sliderNavWrapper ${isOpenMenu ? 'open' : ''}`}>
+                  <div className="row p-4 pb-0">
+                    <span>
+                      <CloseRoundedIcon onClick={() => setisOpenMenu(false)} />
+                    </span>
+                  </div>
                   <ul className="list list-inline mt-3">
-                    <li className="list-inline-item  px-4 py-2">
-                      <Link to={'/'}><span className='icon'><HomeOutlinedIcon/></span>Home</Link>
+                    <li className="list-inline-item px-2 py-2">
+                      <Link to="/" onClick={closeMenu}>
+                        <span className="icon"><HomeOutlinedIcon /></span> Home
+                      </Link>
                     </li>
-                    <li className="list-inline-item px-4 py-2">
-                      <Link to={'/'}><span className='icon'><HomeOutlinedIcon/></span>Home</Link>
+
+                    {/* COMMUNITY */}
+                    <li className="list-inline-item px-2 py-2">
+                      <Link to="#" onClick={() => toggleDropdown('community')}>
+                        <span className="icon"><PeopleIcon /></span> Community
+                        <span className={`icon ${openDropdown === 'community' ? 'rotate' : ''}`}><ArrowDropDownIcon /></span>
+                      </Link>
+                      <ul className={`dropdown communityDropdownMenu ${openDropdown === 'community' ? 'show' : ''}`}>
+                        <li><Link to="yearbook" onClick={closeMenu}>Yearbook</Link></li>
+                        <li><Link to="chapters" onClick={closeMenu}>Chapters</Link></li>
+                        <li><Link to="map" onClick={closeMenu}>Map</Link></li>
+                      </ul>
                     </li>
-                    <li className="list-inline-item px-4 py-2">
-                      <Link to={'/'}><span className='icon'><HomeOutlinedIcon/></span>Home</Link>
+
+                    {/* EVENTS */}
+                    <li className="list-inline-item px-2 py-2">
+                      <Link to="#" onClick={() => toggleDropdown('events')}>
+                        <span className="icon"><CalendarMonthOutlinedIcon /></span> Events
+                        <span className={`icon ${openDropdown === 'events' ? 'rotate' : ''}`}><ArrowDropDownIcon /></span>
+                      </Link>
+                      <ul className={`dropdown eventsDropdownMenu ${openDropdown === 'events' ? 'show' : ''}`}>
+                        <li><Link to="alumnievents" onClick={closeMenu}>Alumni Events</Link></li>
+                        <li><Link to="feed" onClick={closeMenu}>Campus Feed</Link></li>
+                        <li><Link to="gallery" onClick={closeMenu}>Gallery</Link></li>
+                      </ul>
                     </li>
-                    <li className="list-inline-item px-4 py-2">
-                      <Link to={'/'}><span className='icon'><HomeOutlinedIcon/></span>Home</Link>
+
+                    {/* ABOUT */}
+                    <li className="list-inline-item px-2 py-2">
+                      <Link to="#" onClick={() => toggleDropdown('about')}>
+                        <span className="icon"><InfoOutlinedIcon /></span> About
+                        <span className={`icon ${openDropdown === 'about' ? 'rotate' : ''}`}><ArrowDropDownIcon /></span>
+                      </Link>
+                      <ul className={`dropdown aboutDropdownMenu ${openDropdown === 'about' ? 'show' : ''}`}>
+                        <li><Link to="ourstory" onClick={closeMenu}>Our Story</Link></li>
+                        <li><Link to="team" onClick={closeMenu}>Team</Link></li>
+                        <li><Link to="career" onClick={closeMenu}>Career</Link></li>
+                      </ul>
+                    </li>
+                    <li className="list-inline-item px-2 py-2">
+                      <Link to={'/'} onClick={closeMenu}><span className='icon' ><VpnKeyOutlinedIcon/></span>Register</Link>
                     </li>
                   </ul>
           
@@ -117,18 +169,42 @@ const MainPagesNavbar = () => {
 }
 
 {windowWidth > 778 && 
-      <div className = "row p-2 m-0">
+      <div className = "row  m-0">
         <div className = "col-5 d-flex justify-content-center align-items-center part1 m-auto">
           <Link to='/' className=' d-flex justify-content-center align-items-center'><img className="nav-logo" alt="" src={Logo}/>PVPIT CONNECT</Link>
         </div>
         <div className="col-7 d-flex align-items-center part2 m-auto">
-          <ul className="d-flex justify-content-center align-items-center">
+          <ul className="d-flex justify-content-center align-items-center ">
             {/* <li className=""><Link to ="/"   className={`${activeLink === 'home' ? 'active' : ''}`} onClick={() => handleLinkClick('home')} aria-current="home">Home</Link></li> */}
-            <li className=""><Link to ="yearbook" >Community</Link></li>
-            <li className=""><Link to ="" >Events</Link></li>
-            <li className=""><Link to ="about" className={`${activeLink === 'about' ? 'active':''}`} onClick={()=>{handleLinkClick('about')}}>About</Link></li>
-            <li className=""><Link to ="services" className={`${activeLink === 'services' ? 'active':''}`} onClick={()=>{handleLinkClick('services')}}>Login</Link></li>
-            <li className=""><Link to ="contact" className={`highlight ${activeLink === 'contact' ? 'active':''}`} onClick={()=>{handleLinkClick('contact')}}> Register </Link></li>
+            <li className="communityDropdownWrapper d-flex justify-content-center DropdownWrapper">
+              <Link to ="" >Community<span className='icon'><ArrowDropDownIcon/></span></Link>
+              <ul className="communityDropdownMenu dropdown" >
+                <Link to="yearbook"><li>Yearbook</li></Link>
+                <Link to="chapters"><li>Chapters</li></Link>
+                <Link to="map"><li>Map</li></Link>
+              </ul>
+            </li>
+
+            <li className="eventsDropdownWrapper d-flex justify-content-center DropdownWrapper">
+              <Link to ="" >   Events   <span className='icon'><ArrowDropDownIcon/></span></Link>
+              <ul className="eventsDropdownMenu dropdown">
+                <Link to="alumnievents"><li>Alumni Events</li></Link>
+                <Link to="feed"><li>Campus Feed</li></Link>
+                <Link to="gallery"><li>Gallery</li></Link>
+              </ul>
+            </li>
+
+            <li className="aboutDropdownWrapper d-flex justify-content-center DropdownWrapper">
+              <Link to ="" >   About   <span className='icon'><ArrowDropDownIcon/></span></Link>
+              <ul className="aboutDropdownMenu dropdown">
+                <Link to="ourstory"><li>Our Story</li></Link>
+                <Link to="team"><li>Team</li></Link>
+                <Link to="career"><li>Career</li></Link>
+              </ul>
+            </li>
+
+            <li className=""><Link to ="login">Login</Link></li>
+            <li ><Link to ="Register" className="highlight">Register </Link></li>
           </ul>
         </div>
         {/* <div className="col-1"></div> */}
