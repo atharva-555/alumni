@@ -8,6 +8,7 @@ import ErrorFallback from "./ErrorFallback";
 import Layout from './Layout/Layout.jsx'
 import AddJob from './Pages/AddJob/Addjob.jsx'
 import Registeration from './Pages/Registeration/Registeration.jsx'
+import Events from './Pages/Event/Event.jsx'
 import Login from './Pages/Login/Login.jsx'
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Layout/>} errorElement={<ErrorPage />}>
             <Route index element={<Home />} />
             <Route path="/yearbook" element={<Yearbook />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/post-job" element={<AddJob />} />
             <Route path="/register" element={<Registeration />} />
             <Route path="/login" element={<Login />} />
