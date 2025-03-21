@@ -50,6 +50,7 @@ header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) 
 
     header .part2 {width: 40%;text-decoration: none;color: #fff;}
     header .part2 .signinBtn{font-size:1.2rem;text-transform: uppercase;font-weight: 600;justify-content: end;}
+    header .part2 a{text-decoration: none;color: white;}
     header .part2  span{width: auto!important;}
     header .part2 .navbarToggle{ padding: 0 10px;  justify-content: flex-end;}
 

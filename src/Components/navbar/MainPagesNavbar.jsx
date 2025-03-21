@@ -90,7 +90,7 @@ const MainPagesNavbar = () => {
             <Link to='/' className=' d-flex justify-content-flex-start align-items-center'><img className="nav-logo" alt="" src={Logo}/>PVPIT CONNECT</Link>
           </div>
           <div className=" d-flex align-items-center justify-content-center part2 m-auto">
-            <div className="signinBtn d-flex ">Sign In</div>
+          <Link to={'/login'} ><div className="signinBtn d-flex ">Sign In</div></Link>
 
             <span ><div className=' navbarToggle d-flex justify-content-center' onClick={openMenu}><MenuRoundedIcon/></div></span>
             {/* <ul className="d-flex justify-content-center align-items-center">
@@ -139,7 +139,7 @@ const MainPagesNavbar = () => {
                         <span className={`icon ${openDropdown === 'events' ? 'rotate' : ''}`}><ArrowDropDownIcon /></span>
                       </Link>
                       <ul className={`dropdown eventsDropdownMenu ${openDropdown === 'events' ? 'show' : ''}`}>
-                        <li><Link to="alumnievents" onClick={closeMenu}>Alumni Events</Link></li>
+                        <li><Link to="events" onClick={closeMenu}>Alumni Events</Link></li>
                         <li><Link to="feed" onClick={closeMenu}>Campus Feed</Link></li>
                         <li><Link to="gallery" onClick={closeMenu}>Gallery</Link></li>
                       </ul>
@@ -158,7 +158,7 @@ const MainPagesNavbar = () => {
                       </ul>
                     </li>
                     <li className="list-inline-item px-2 py-2">
-                      <Link to={'/'} onClick={closeMenu}><span className='icon' ><VpnKeyOutlinedIcon/></span>Register</Link>
+                      <Link to={'/register'} onClick={closeMenu}><span className='icon' ><VpnKeyOutlinedIcon/></span>Register</Link>
                     </li>
                   </ul>
           
@@ -188,7 +188,7 @@ const MainPagesNavbar = () => {
             <li className="eventsDropdownWrapper d-flex justify-content-center DropdownWrapper">
               <Link to ="" >   Events   <span className='icon'><ArrowDropDownIcon/></span></Link>
               <ul className="eventsDropdownMenu dropdown">
-                <Link to="alumnievents"><li>Alumni Events</li></Link>
+                <Link to="events"><li>Alumni Events</li></Link>
                 <Link to="feed"><li>Campus Feed</li></Link>
                 <Link to="gallery"><li>Gallery</li></Link>
               </ul>
@@ -204,7 +204,7 @@ const MainPagesNavbar = () => {
             </li>
 
             <li className=""><Link to ="login">Login</Link></li>
-            <li ><Link to ="Register" className="highlight">Register </Link></li>
+            <li ><Link to ="register" className="highlight">Register </Link></li>
           </ul>
         </div>
         {/* <div className="col-1"></div> */}
