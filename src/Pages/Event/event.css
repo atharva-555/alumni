@@ -1,0 +1,127 @@
+.form-container {
+    width: 600px;
+    margin: auto;
+    padding: 10%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alumni-form {
+    display: block;
+    flex-direction: column;
+  }
+  
+  .alumni-form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #8b0000;
+  }
+  
+  .alumni-form input,
+  .alumni-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .alumni-form textarea {
+    height: 150px; /* Increased height for description */
+    resize: vertical;
+  }
+  
+  .date-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .date-container div {
+    width: 48%;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #8b0000;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    text-align: center !important;
+    width: 20%;
+  }
+  .button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+  
+  button:hover {
+    background: #a00000;
+  }
+  
+  span{
+    color: red;
+  }
+  .file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 16px;
+  }
+  
+  .file-upload span1 {
+    flex-grow: 1;
+    color: #777;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+  
+  .browse-btn {
+    background: #adadad;
+    color: #000000 !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .browse-btn input {
+    display: none; /* Hide default file input */
+  }
+  
+  .browse-btn:hover {
+    background: #6d6d6d;
+  }
+  
+  @media (max-width: 768px) {
+    .date-container {
+      flex-direction: row; /* Keep Start and End Date in One Row */
+      gap: 10px;
+    }
+  
+    .date-container div {
+      width: 48%;
+    }
+  
+    .browse-btn {
+      width: 40%;
+    }
+  
+    button {
+      width: 30% !important /* Ensures submit button remains 20-30% */
+    }
+  }
+  
