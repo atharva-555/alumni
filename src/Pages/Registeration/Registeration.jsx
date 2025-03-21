@@ -60,14 +60,14 @@ export default function RegistrationForm() {
 
   return (
     <>
-      <h1>Registration Form</h1>
-      <div className="container">
+      <h1 className="reg-heading">Registration Form</h1>
+      <div className="reg-container">
         <form onSubmit={handleSubmit} className="form">
           {/* Personal Details */}
-          <h3 className="section-title">Personal Details</h3>
-          <div className="half-width">
-            <label>
-              You are:<span>*</span>
+          <h3 className="reg-section-title">Personal Details</h3>
+          <div className="reg-half-width">
+            <label className="reg-label">
+              You are:<span className="reg-required">*</span>
               <select name="status" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Student/Alumni
@@ -77,9 +77,9 @@ export default function RegistrationForm() {
               </select>
             </label>
           </div>
-          <div className="input-grid">
-            <label>
-              Enrollment No:<span>*</span>
+          <div className="reg-input-grid">
+            <label className="reg-label">
+              Enrollment No:<span  className="reg-required">*</span>
               <input
                 type="text"
                 placeholder="Enter Roll No"
@@ -88,8 +88,8 @@ export default function RegistrationForm() {
                 onChange={handleChange}
               />
             </label>
-            <label>
-              Full Name:<span>*</span>
+            <label className="reg-label">
+              Full Name:<span  className="reg-required">*</span>
               <input
                 type="text"
                 placeholder="Enter Your Full Name"
@@ -98,8 +98,8 @@ export default function RegistrationForm() {
                 onChange={handleChange}
               />
             </label>
-            <label>
-              Mother's Name:<span>*</span>
+            <label className="reg-label">
+              Mother's Name:<span  className="reg-required">*</span>
               <input
                 type="text"
                 placeholder="Enter Your Father's/Mother's Name"
@@ -108,16 +108,16 @@ export default function RegistrationForm() {
                 onChange={handleChange}
               />
             </label>
-            <label>
+            <label className="reg-label">
               Spouse's Name:
               <input type="text" placeholder="Enter Your Spouse's Name" />
             </label>
-            <div className="gender-container">
-              <label className="gender-label">
-                Gender:<span>*</span>
+            <div className="reg-gender-container">
+              <label className="reg-gender-label">
+                Gender:<span  className="reg-required">*</span>
               </label>
-              <div className="gender-options">
-                <label>
+              <div className="reg-gender-options">
+                <label className="reg-label">
                   <input
                     type="radio"
                     name="gender"
@@ -128,7 +128,7 @@ export default function RegistrationForm() {
                   />
                   Male
                 </label>
-                <label>
+                <label className="reg-label">
                   <input
                     type="radio"
                     name="gender"
@@ -139,7 +139,7 @@ export default function RegistrationForm() {
                   />
                   Female
                 </label>
-                <label>
+                <label className="reg-label">
                   <input
                     type="radio"
                     name="gender"
@@ -153,18 +153,18 @@ export default function RegistrationForm() {
               </div>
             </div>
 
-            <label>
-              Date of Birth:<span>*</span>
+            <label className="reg-label">
+              Date of Birth:<span className="reg-required">*</span>
               <input type="date" name="dob" required onChange={handleChange} />
             </label>
           </div>
           {/* Academic Details */}
-          <h3 className="section-title">
-            Academic Details<span>*</span>
+          <h3 className="reg-section-title">
+            Academic Details
           </h3>
-          <div className="input-grid">
-            <label>
-              Course:<span>*</span>
+          <div className="reg-input-grid">
+            <label className="reg-label">
+              Course:<span className="reg-required">*</span>
               <select name="course" required onChange={handleChange}>
                 <option value="" disabled selected>
                   select Programme<span>*</span>
@@ -174,8 +174,8 @@ export default function RegistrationForm() {
                 <option value="MBA">MBA</option>
               </select>
             </label>
-            <label>
-              Stream:<span>*</span>
+            <label className="reg-label">
+              Stream:<span className="reg-required">*</span>
               <select name="stream" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Select discipline
@@ -185,8 +185,8 @@ export default function RegistrationForm() {
                 <option value="Mechanical">Mechanical</option>
               </select>
             </label>
-            <label>
-              Year of Admission:<span>*</span>
+            <label className="reg-label">
+              Year of Admission:<span className="reg-required">*</span>
               <select name="admissionYear" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Select Admission Year
@@ -196,8 +196,8 @@ export default function RegistrationForm() {
                 <option>2021</option>
               </select>
             </label>
-            <label>
-              Year of Passing:<span>*</span>
+            <label className="reg-label">
+              Year of Passing:<span className="reg-required">*</span>
               <select name="passingYear" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Select Year Of Passing
@@ -209,10 +209,10 @@ export default function RegistrationForm() {
             </label>
           </div>
           {/* Contact Details */}
-          <h3 className="section-title">Contact Details</h3>
-          <div className="input-grid">
-            <label>
-              Mobile No:<span>*</span>
+          <h3 className="reg-section-title">Contact Details</h3>
+          <div className="reg-input-grid">
+            <label className="reg-label">
+              Mobile No:<span className="reg-required">*</span>
               <input
                 type="tel"
                 placeholder="Enter your phone number"
@@ -221,12 +221,12 @@ export default function RegistrationForm() {
                 onChange={handleChange}
               />
             </label>
-            <label>
+            <label className="reg-label">
               Alternate Mobile No:
               <input type="tel" placeholder="Enter Alterante Phone number" />
             </label>
-            <label>
-              Personal Email:<span>*</span>
+            <label className="reg-label">
+              Personal Email:<span className="reg-required">*</span>
               <input
                 type="email"
                 placeholder="Enter Your Personal Email"
@@ -235,8 +235,8 @@ export default function RegistrationForm() {
                 onChange={handleChange}
               />
             </label>
-            <label>
-              Official Email:<span>*</span>
+            <label className="reg-label">
+              Official Email:<span className="reg-required">*</span>
               <input
                 type="email"
                 placeholder="Enter Your Official Email"
@@ -246,9 +246,9 @@ export default function RegistrationForm() {
               />
             </label>
           </div>
-          <div className="input-row full-width">
-            <label>
-              Current Address:<span>*</span>
+          <div className="reg-input-row full-width">
+            <label className="reg-label">
+              Current Address:<span className="reg-required">*</span>
               <input
                 type="text"
                 id="currentAddress"
@@ -259,9 +259,9 @@ export default function RegistrationForm() {
               />
             </label>
           </div>
-          <div className="location-grid">
-            <label>
-              Country:<span>*</span>
+          <div className="reg-location-grid">
+            <label className="reg-label">
+              Country:<span className="reg-required">*</span>
               <select name="country" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Select Country
@@ -271,8 +271,8 @@ export default function RegistrationForm() {
                 <option>UK</option>
               </select>
             </label>
-            <label>
-              State:<span>*</span>
+            <label className="reg-label">
+              State:<span className="reg-required">*</span>
               <select name="state" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Select State
@@ -282,8 +282,8 @@ export default function RegistrationForm() {
                 <option>Delhi</option>
               </select>
             </label>
-            <label>
-              City:<span>*</span>
+            <label className="reg-label">
+              City:<span className="reg-required">*</span>
               <select name="city" required onChange={handleChange}>
                 <option value="" disabled selected>
                   Select City<span>*</span>
@@ -294,9 +294,9 @@ export default function RegistrationForm() {
               </select>
             </label>
           </div>
-          <div className="input-row full-width">
-            <label>
-              Permanent Address:<span>*</span>
+          <div className="reg-input-row full-width">
+            <label className="reg-label">
+              Permanent Address:<span className="reg-required">*</span>
               <label className="copy_add">
                 <input
                   type="checkbox"
@@ -316,12 +316,12 @@ export default function RegistrationForm() {
             </label>
           </div>
           {/* Experience & Higher Studies */}
-          <h3 className="section-title">Experience & Higher Studies</h3>
-          <label className="Working_Status">
-            Working Status<span>*</span>
+          <h3 className="reg-section-title">Experience & Higher Studies</h3>
+          <label className="reg-label reg-Working_Status">
+            Working Status<span  className="reg-required">*</span>
           </label>
-          <div className="Working_options">
-            <label>
+          <div className="reg-Working_options">
+            <labe className="reg-label">
               <input
                 type="radio"
                 name="workingStatus"
@@ -331,8 +331,8 @@ export default function RegistrationForm() {
                 onChange={handleChange}
               />{" "}
               Is Working
-            </label>
-            <label>
+            </labe>
+            <label className="reg-label">
               <input
                 type="radio"
                 name="workingStatus"
@@ -343,7 +343,7 @@ export default function RegistrationForm() {
               />{" "}
               Is Pursuing Higher Studies
             </label>
-            <label>
+            <label className="reg-label">
               <input
                 type="radio"
                 name="workingStatus"
@@ -357,10 +357,10 @@ export default function RegistrationForm() {
           </div>
 
           {/* Socials */}
-          <h3 className="section-title">Socials</h3>
-          <div className="input-grid">
-            <label>
-              LinkedIn:<span>*</span>
+          <h3 className="reg-section-title">Socials</h3>
+          <div className="reg-input-grid">
+            <label className="reg-label">
+              LinkedIn:<span className="reg-required">*</span>
               <input
                 type="url"
                 placeholder="Enter you LinkedIn Profile Link"
@@ -369,18 +369,18 @@ export default function RegistrationForm() {
                 onChange={handleChange}
               />
             </label>
-            <label>
+            <label className="reg-label">
               Facebook:
               <input type="url" placeholder="Enter you Facebook Profile Link" />
             </label>
-            <label>
+            <label className="reg-label">
               Instagram:
               <input
                 type="url"
                 placeholder="Enter you Instagram Profile Link"
               />
             </label>
-            <label>
+            <label className="reg-label">
               Website:
               <input
                 type="url"
@@ -388,33 +388,32 @@ export default function RegistrationForm() {
               />
             </label>
           </div>
-          <div className="full-width file-upload">
-            <span className="file-name">
+          <div className="reg-full-width reg-file-upload">
+            <span className="reg-file-name">
               {formData.profilePicture
                 ? formData.profilePicture.name
                 : "Choose your Profile Picture "}
             </span>
-            <label className="browse-btn">
+            <label className="reg-browse-btn">
               Browse
               <input type="file" name="profilePicture"  onChange={handleChange} />
             </label>
           </div>
-          {errors.profilePicture && <p className="error-message">{errors.profilePicture}</p>}
+          {errors.profilePicture && <p className="reg-error-message">{errors.profilePicture}</p>}
 
           {/* Checkbox */}
-          <label className="checkbox-container">
+          <label className="reg-checkbox-container">
             <input
               type="checkbox"
               name="agreement"
               required
               onChange={handleChange}
             />
-            I will update my information at regular inetrvals and will engage in
-            the Alumni network actively
-            <span>*</span>
+            I will update my information at regular inetrvals and will engage in the Alumni network actively
+            <span  className="reg-required">*</span>
           </label>
 
-          <button type="submit" >Submit</button>
+          <button className="reg-submit" type="submit" >Submit</button>
         </form>
       </div>
     </>

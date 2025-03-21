@@ -1,4 +1,4 @@
-.form-container {
+.alumni-container {
     width: 600px;
     margin: auto;
     padding: 10%;
@@ -33,16 +33,16 @@
     resize: vertical;
   }
   
-  .date-container {
+  .alumni-date-container {
     display: flex;
     justify-content: space-between;
   }
   
-  .date-container div {
+  .alumni-date-container div {
     width: 48%;
   }
   
-  button {
+  .alumni-submit {
     margin-top: 15px;
     padding: 10px;
     background: #8b0000;
@@ -55,20 +55,20 @@
     text-align: center !important;
     width: 20%;
   }
-  .button-container {
+  .alumni-button-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
   
-  button:hover {
+  .alumni-submit:hover {
     background: #a00000;
   }
   
-  span{
+  .alumni-required{
     color: red;
   }
-  .file-upload {
+  .alumni-file-upload {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,7 +80,7 @@
     font-size: 16px;
   }
   
-  .file-upload span1 {
+  .alumni-file-upload span1 {
     flex-grow: 1;
     color: #777;
     overflow: hidden;
@@ -89,7 +89,7 @@
     text-align: left;
   }
   
-  .browse-btn {
+  .alumni-browse-btn {
     background: #adadad;
     color: #000000 !important;
     padding: 8px 15px;
@@ -98,29 +98,29 @@
     font-size: 14px;
   }
   
-  .browse-btn input {
+  .alumni-browse-btn input {
     display: none; /* Hide default file input */
   }
   
-  .browse-btn:hover {
+  .alumni-browse-btn:hover {
     background: #6d6d6d;
   }
   
   @media (max-width: 768px) {
-    .date-container {
+    .alumni-date-container {
       flex-direction: row; /* Keep Start and End Date in One Row */
       gap: 10px;
     }
   
-    .date-container div {
+    .alumni-date-container div {
       width: 48%;
     }
   
-    .browse-btn {
+    .alumni-browse-btn {
       width: 40%;
     }
   
-    button {
+    .alumni-submit {
       width: 30% !important /* Ensures submit button remains 20-30% */
     }
   }

@@ -1,4 +1,4 @@
-.form-container {
+.job-container {
     width: 600px;
     margin: auto;
     padding: 10%;
@@ -6,10 +6,10 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  .heading{
+  .job-heading{
     font-size: 25px; 
   }
-  .heading::after{
+  .job-heading::after{
     display: none;
   }
   .addjob {
@@ -38,32 +38,32 @@
     height: 150px; /* Increased height for description */
     resize: vertical;
   }
-  .Info {
+  .job-Info {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     column-gap: 10%; 
   }
   
-  .payment{
+  .job-details{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     column-gap: 8%;
   }
-  .time{
+  .job-time{
     font-size: 10px;
     color: blue;
   }
-  .date-container {
+  .job-date-container {
     display: flex;
     justify-content: space-between;
     column-gap: 10% ;
   }
   
-  .date-container div {
+  .job-date-container div {
     width: 48%;
   }
   
-  button {
+  .job-submit {
     margin-top: 15px;
     padding: 10px;
     background: #8b0000;
@@ -76,36 +76,36 @@
     text-align: center !important;
     width: 20%;
   }
-  .button-container {
+  .job-button-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
   
-  button:hover {
+  .job-submit:hover {
     background: #a00000;
   }
   
-  span{
+  .job-required{
     color: red;
   }
   
   
   @media (max-width: 768px) {
-    .date-container {
+    .job-date-container {
       flex-direction: row; /* Keep Start and End Date in One Row */
       gap: 10px;
     }
   
-    .date-container div {
+    .job-date-container div {
       width: 48%;
     }
-  .payment{
+  .job-payment{
     display: grid;
     grid-template-columns: repeat(2,1fr);
   }
    
-    button {
+    .job-submit {
       width: 30% !important /* Ensures submit button remains 20-30% */
     }
   }

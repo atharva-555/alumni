@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 
+
 export default function Signup() {
 
   const [formData, setFormData] = useState({
@@ -26,9 +27,10 @@ export default function Signup() {
       <h2 className="signin-title">Sign in</h2>
       <div className="signin-box">
         <form onSubmit={handleSubmit}>
-          <label>Email <span>*</span></label>
+          <label className="signin-label">Email <span className="signin-required">*</span></label>
           <input 
             type="email" 
+            className="signin-input"
             name="email" 
             placeholder="Enter your email" 
             required
@@ -36,18 +38,20 @@ export default function Signup() {
           />
          
 
-          <label>Roll no. <span>*</span></label>
+          <label className="signin-label">Roll no. <span className="signin-required">*</span></label>
           <input 
             type="text" 
+             className="signin-input"
             name="rollNo" 
             placeholder="Enter your roll number" 
             required
             onChange={handleChange} 
           />
           
-          <label>Password <span>*</span></label>
+          <label className="signin-label">Password <span className="signin-required">*</span></label>
           <input 
-            type="password" 
+            type="password"
+            className="signin-input" 
             name="password" 
             placeholder="Enter your password" 
             required
@@ -61,9 +65,9 @@ export default function Signup() {
         </form>
       </div>
 
-      <div className="register-box">
+      <div className="signin-register-box">
         <p>Don’t have an account?</p>
-        <button className="register-btn" >
+        <button className="register-btn" onClick={() => navigate("/register")}>
           REGISTER HERE
         </button>
       </div>

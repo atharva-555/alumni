@@ -1,21 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    
-  }
+.signin-container {
   
-  .signin-container {
+   
+    
+ 
     text-align: center;
   }
   
   .signin-title {
     color: #781d1d;
-    font-size: 24px;
+    font-size: 34px;
     margin-bottom: 20px;
     position: relative;
     display: inline-block; /* Ensures underline width is based on text */
@@ -24,12 +17,12 @@ body {
 .signin-title::after {
     content: "";
     display: block;
-    width: 50%; /* Half-width underline */
+    width: 4%; /* Half-width underline */
     height: 3px; /* Thickness of the underline */
     background-color: #781d1d; /* Same color as the heading */
     position: absolute;
-    left: 25%; /* Centers the half underline */
-    bottom: -5px; /* Adjust distance from text */
+    left: 48%; /* Centers the half underline */
+    /* Adjust distance from text */
 }
 
   
@@ -40,9 +33,13 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 500px;
     text-align: left;
+    align-items: center;
+    margin: 0 auto; /* Centers it horizontally */
+    display: block;
+    margin-bottom: 10px;
   }
   
-  label {
+  .signin-label {
     font-size: 14px;
     font-weight: bold;
     color: #781d1d;
@@ -50,11 +47,11 @@ body {
     display: block;
     margin-left: 5%; /* Ensures alignment with input */
   }
-  span{
+  .signin-required{
     color: red;
   }
   
-  input {
+   .signin-input {
     width: 90%; /* Adjust to control input width */
     max-width: 400px;
     padding: 10px;
@@ -86,7 +83,7 @@ body {
     margin: 10px auto; /* Centers the button horizontally */
     text-align: center;
   }
-  button[type="submit"]{
+  .signin-btn{
     padding: 10px 30px !important;
   }
   
@@ -94,15 +91,19 @@ body {
     background-color: #5d1414;
   }
   
-  .register-box {
+  .signin-register-box {
     margin-top: 15px;
+    padding-left: 10px;
+    width: 500px;
     background: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centers it horizontally */
+    display: block;
   }
   
-  .register-box p {
+  .signin-register-box p {
     margin: 0;
     color: #781d1d;
   }
@@ -123,13 +124,7 @@ body {
     background-color: #5d1414;
   }
 
-  .error {
-    color: red; /* Red text for errors */
-    font-size: 14px;
-    margin-top: 4px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
+ 
   
   @media (max-width: 600px) {
     .signin-box, .register-box {
@@ -137,12 +132,12 @@ body {
       padding: 15px;
     }
   
-    input {
+    .signin-input {
       width: 100%;
       max-width: none;
       margin: 0 0 15px 0;
     }
-    input, select {
+    .signin-input {
       padding: 5px !important;
     }
     .register-btn {
@@ -152,7 +147,7 @@ body {
     .signin-btn{
       width: 70%;
     }
-    button[type="submit"]{
+    .signin-btn{
       padding: 10px 45px !important;
     }
   }

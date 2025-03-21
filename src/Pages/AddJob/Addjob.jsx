@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Addjob.css";
+import "./addjob.css";
 
 export default function Addjob() {
   const [formData, setFormData] = useState({
@@ -32,38 +32,38 @@ export default function Addjob() {
   };
 
   return (
-    <div className="form-container">
+    <div className="job-container">
       <form onSubmit={handleSubmit} className="addjob">
-        <h1 className="heading">POST A NEW OPPORTUNITY</h1>
-        <div className="Info">
+        <h1 className="job-heading">POST A NEW OPPORTUNITY</h1>
+        <div className="job-Info">
             <div>
         <label>
-          Type <span>*</span>
+          Type <span className="job-required">*</span>
         </label>
         <input type="text" name="type" required onChange={handleChange} />
         </div>
         <div>
         <label>
-          Role <span>*</span>
+          Role <span className="job-required">*</span>
         </label>
         <input type="text" name="role" required onChange={handleChange} />
         </div>
         <div>
         <label>
-        Company <span>*</span>
+        Company <span className="job-required">*</span>
         </label>
         <input type="text" name="company" required onChange={handleChange} />
         </div>
         <div>
         <label>
-          Location <span>*</span>
+          Location <span className="job-required">*</span>
         </label>
         <input type="text" name="location" required onChange={handleChange} />
         </div>
         </div>
 
          <label>
-          Link To Apply <span>*</span>
+          Link To Apply <span className="job-required">*</span>
         </label>
         <input type="text" name="link" required onChange={handleChange} />
 
@@ -71,37 +71,37 @@ export default function Addjob() {
 
 
         <label>
-          Description <span>*</span>
+          Description <span className="job-required">*</span>
         </label>
         <textarea
-          className="description"
+          className="job-description"
           name="description"
           required
           onChange={handleChange}
         />
 
-        <div className="payment">
-            <div>
+        <div className="job-details">
+        <div>
         <label>
-          Stipend<span className="time">(Per months)</span><span>*</span>
+          Stipend<span className="job-time">(Per months)</span><span className="job-required">*</span>
         </label>
         <input type="text" name="stipend" required onChange={handleChange} />
         </div>
         <div>
-        <label>Tenure<span className="time">(In Months)</span><span>*</span></label>
+        <label>Tenure<span className="job-time">(In Months)</span><span className="job-required">*</span></label>
         <input type="text" name="tenure" required onChange={handleChange} />
         </div>
         <div>
-        <label>Min.Experience<span className="time">(In Years)</span> <span>*</span></label>
+        <label>Min.Experience<span className="job-time">(In Years)</span> <span className="job-required">*</span></label>
         <input type="text" name="experience" required onChange={handleChange} />
         </div>
         </div>
 
         
-        <div className="date-container">
+        <div className="job-date-container">
           <div>
             <label>
-              Last Date to Apply <span>*</span>
+              Last Date to Apply <span className="job-required">*</span>
             </label>
             <input
               type="date"
@@ -112,7 +112,7 @@ export default function Addjob() {
           </div>
           <div>
             <label>
-              Joining Date <span>*</span>
+              Joining Date <span className="job-required">*</span>
             </label>
             <input
               type="date"
@@ -123,8 +123,8 @@ export default function Addjob() {
           </div>
         </div>
 
-        <div className="button-container">
-          <button type="submit">SUBMIT</button>
+        <div className="job-button-container">
+          <button className="job-submit" type="submit">SUBMIT</button>
         </div>
       </form>
     </div>

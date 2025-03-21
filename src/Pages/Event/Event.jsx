@@ -27,15 +27,15 @@ export default function AlumniForm() {
   };
 
   return (
-    <div className="form-container">
+    <div className="alumni-container">
       <form onSubmit={handleSubmit} className="alumni-form">
         <label>
-          Title <span>*</span>
+          Title <span className="alumni-required">*</span>
         </label>
         <input type="text" name="title" required onChange={handleChange} />
 
         <label>
-          Description <span>*</span>
+          Description <span className="alumni-required">*</span>
         </label>
         <textarea
           className="description"
@@ -44,10 +44,10 @@ export default function AlumniForm() {
           onChange={handleChange}
         />
 
-        <div className="date-container">
+        <div className="alumni-date-container">
           <div>
             <label>
-              Start Date <span>*</span>
+              Start Date <span className="alumni-required">*</span>
             </label>
             <input
               type="date"
@@ -58,7 +58,7 @@ export default function AlumniForm() {
           </div>
           <div>
             <label>
-              End Date <span>*</span>
+              End Date <span className="alumni-required">*</span>
             </label>
             <input
               type="date"
@@ -70,7 +70,7 @@ export default function AlumniForm() {
         </div>
 
         <label>
-          Address <span>*</span>
+          Address <span className="alumni-required">*</span>
         </label>
         <input type="text" name="address" required onChange={handleChange} />
 
@@ -81,20 +81,20 @@ export default function AlumniForm() {
         <input type="text" name="organizer" onChange={handleChange} />
 
         <label>Cover Image (Optional)</label>
-        <div className="file-upload">
+        <div className="alumni-file-upload">
           <span1>
             {formData.coverImage
               ? formData.coverImage.name
               : "Choose your Cover Picture"}
           </span1>
-          <label className="browse-btn">
+          <label className="alumni-browse-btn">
             Browse
             <input type="file" name="coverImage" onChange={handleChange} />
           </label>
         </div>
 
-        <div className="button-container">
-          <button type="submit">SUBMIT</button>
+        <div className="alumni-button-container">
+          <button className="alumni-submit" type="submit">SUBMIT</button>
         </div>
       </form>
     </div>
