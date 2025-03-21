@@ -23,6 +23,7 @@
     padding: 30px;
     margin: auto;
     border-radius: 10px;
+    margin-bottom: 25px;
   }
  .reg-section-title {
     color: #831619;
@@ -219,7 +220,7 @@
       text-align: center;
     }
     .reg-heading::after {
-      width: 80%; /* Make underline wider on small screens */
+      width: 30%; /* Make underline wider on small screens */
     }
   
     .reg-container {

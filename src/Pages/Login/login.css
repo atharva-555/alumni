@@ -1,8 +1,5 @@
 .signin-container {
-  
-   
-    
- 
+
     text-align: center;
   }
   
@@ -127,9 +124,12 @@
  
   
   @media (max-width: 600px) {
-    .signin-box, .register-box {
-      width: 110%;
+    .signin-box, .signin-register-box {
+      width: 100%;
       padding: 15px;
+    }
+    .signin-title::after {
+        width:10%
     }
   
     .signin-input {
