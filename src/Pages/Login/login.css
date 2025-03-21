@@ -98,6 +98,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto; /* Centers it horizontally */
     display: block;
+    margin-bottom: 20px;
   }
   
   .signin-register-box p {
@@ -131,6 +132,10 @@
     .signin-title::after {
         width:10%
     }
+
+    .signin-register-box{
+      margin-bottom: 20px;
+    } 
   
     .signin-input {
       width: 100%;
