@@ -1,8 +1,31 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
+
 import "./login.css";
 
 
 export default function Signup() {
+
+  // AUTHENTICATION,LOGIN,SETTING USER CONTEXT
+  const { login } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const [role, setRole] = useState("student"); // Default to student
+
+  const handleLogin = (formData) => {
+    const userData = {
+      formData,
+      role: role, // role can be 'admin', 'student', or 'guest'
+    };
+
+    // Simulate login with user data
+    login(userData);
+    navigate("/"); // Redirect to homepage after login
+  };
+
+
+  // 
 
   const [formData, setFormData] = useState({
     email: "",
@@ -20,6 +43,7 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
+    handleLogin(formData);
   };
 
   return (

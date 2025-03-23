@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useContext } from 'react'
 import { Suspense, lazy } from 'react'
 import { Routes,Route } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
@@ -10,28 +10,60 @@ import AddJob from './Pages/AddJob/Addjob.jsx'
 import Registeration from './Pages/Registeration/Registeration.jsx'
 import Events from './Pages/Event/Event.jsx'
 import Login from './Pages/Login/Login.jsx'
+import GuestHome from './Pages/Home/Home.jsx'
 import './App.css'
+import { AuthContext } from './Context/AuthContext';
+
 
 // Lazy Loading compoments
 // const Layout = lazy(() => import("./Layout/Layout.jsx"));
-const Home = lazy(()=> import("./Pages/Home/Home.jsx"))
 const Yearbook = lazy(()=> import("./Pages/Yearbook/Yearbook.jsx"))
+const AdminDashboard = lazy(()=> import("./Pages/AdminDashboard/AdminDashboard.jsx"))
+// const Yearbook = lazy(()=> import("./Pages/Yearbook/Yearbook.jsx"))
+const StudentDashboard = lazy(()=> import("./Pages/StudentProfile/Studentprofile.jsx"))
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const { user } = useContext(AuthContext);
+
+  // Conditionally render homepage based on role
+    const getHomeComponent = () => {
+      if (!user) {
+        // console.log("Current User:", user);
+        return <GuestHome/>;
+       
+      } else if (user?.role === "admin") {
+        return <AdminDashboard />;
+      } else if (user?.role === "student") {
+        return <StudentDashboard />;
+      } else {
+        return <GuestHome />; // Fallback if the role is invalid
+      }
+    };
+    
+  // console.log("Current User:", user.role);
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Suspense fallback={<Loading/>}>
         <Routes>
           <Route path="/" element={<Layout/>} errorElement={<ErrorPage />}>
-            <Route index element={<Home />} />
+            {/* Default Home based on User Role */}
+            <Route index element={getHomeComponent()} />
+
             <Route path="/yearbook" element={<Yearbook />} />
             <Route path="/events" element={<Events />} />
             <Route path="/post-job" element={<AddJob />} />
             <Route path="/register" element={<Registeration />} />
             <Route path="/login" element={<Login />} />
+
+            {/* Protecting routes according to the user role */}
+            {/* <Route
+            path="/post-job"
+            element={user?.role === "admin" ? <AddJob /> : <Navigate to="/" />}
+          /> */}
+
           </Route>
         </Routes>
       </Suspense>
