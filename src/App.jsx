@@ -13,6 +13,8 @@ import Login from './Pages/Login/Login.jsx'
 import GuestHome from './Pages/Home/Home.jsx'
 import './App.css'
 import { AuthContext } from './Context/AuthContext';
+import AddEmailHistory from './Pages/Addmail/Addmail.jsx'
+import JobSearch from './Pages/JobSearch/Jobsearch.jsx'
 
 
 // Lazy Loading compoments
@@ -57,6 +59,8 @@ function App() {
             <Route path="/post-job" element={<AddJob />} />
             <Route path="/register" element={<Registeration />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/addmail" element={<AddEmailHistory/>}/>
+            <Route path="/jobsearch" element={<JobSearch/>}/>
 
             {/* Protecting routes according to the user role */}
             {/* <Route

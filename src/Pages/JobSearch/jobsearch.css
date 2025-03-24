@@ -1,0 +1,100 @@
+
+
+.jobsearch-container {
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:30vh;
+    width:70%;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .jobsearch-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom:10px
+  }
+  
+  .jobsearch-subtitle {
+    font-size: 18px;
+    color: #b22222;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .jobsearch-filters {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .jobsearch-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 30%;
+  }
+  
+  .job-search-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height:40px;
+    width: 7%;
+    cursor: pointer;
+  }
+  
+  .job-search-btn:hover {
+    background-color: #c9302c;
+  }
+  
+  .job-no-posts {
+    margin-top:-30px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .jobsearch-container {
+        width: 90%; /* Make it take more width on small screens */
+        height: auto; /* Adjust height for better spacing */
+        padding: 15px;
+    }
+
+    .jobsearch-title {
+        font-size: 22px; /* Smaller title */
+    }
+
+    .jobsearch-subtitle {
+        font-size: 16px;
+    }
+
+  
+    .jobsearch-dropdown {
+        font-size: 9px;
+        width: 90%; /* Make dropdowns full-width */
+    }
+
+    .job-search-btn {
+        width: 50px; /* Reduce button width */
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .job-no-posts {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
