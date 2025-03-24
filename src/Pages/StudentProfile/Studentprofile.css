@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .contact-card a{text-decoration: none;}
+  .contact-card svg{font-size: 26px;}
+
+  .profile-container {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 6px 20px rgb(0, 0 ,0 ,0.15);
+  }
+
+  .profile-header .options {align-content: center;border-radius: 50%;width: auto!important;margin-left: auto;margin-right: 3rem;}
+
+  .circle-icon {
+    display: inline-flex;
+    align-content: center;
+    padding: 8px; 
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Set width */
+    height: 40px; /* Same height for a circle */
+    border-radius: 50%; /* Makes it a circle */
+    background-color: rgba(193, 193, 193, 0.623); /* Optional background, adjust as needed */
+    color: white; /* Icon color */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  .profile-header .options .optionsIcons span{width: 20px;height: 20px;}
+  .profile-header .options .optionsIcon svg{color: grey;}
+
+  .profileInfoWrpper {padding: 10px 90px;}
+  
+  .profile-img{height: 200px!important;}
+
+  .profile-img img {
+ 
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Crop and fit the image to the container */
+    border-radius: 50%;
+    border: 4px solid #fff;
+  }
+
+  .profile-info {width: auto;}
+  
+  .profile-info h2 {
+    text-align: left;
+    font-weight: 700;
+    color: black;
+    margin: 10px 0;
+    font-size: 36px;
+  }
+  
+  .profile-info p {
+    text-align: left;
+    font-weight: 700;
+    color: black;
+    margin: 5px 0;
+    font-size: 24px;
+  }
+  
+  .social-links{
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-weight: 700;
+    width: auto;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  /* Content Area */
+  .content-container {
+    padding: 20px;
+  }
+  
+  /* Contact Info */
+  .contact-card {
+    background-color:#fff ;
+   
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: grey;
+    text-decoration: none;
+    font-size: 24px;
+    width: 80%;
+    margin-left: auto;
+
+  }
+  
+  /* Cards */
+  .card {
+    border: none;
+    background-color: #D9D9D926;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+  }
+  
+  .card h4 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+  }
+  .card .card-content img{border-radius:16px ;}
+
+  .institute-logo,
+  .experience-logo {
+    border-radius: 50%;
+    padding: 12px;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .card .cardtextWrapper{width: 55%;}
+
+  .card .cardtextWrapper h5{font-family: Verdana, Geneva, Tahoma, sans-serif;font-size:26px;}
+  .card .cardtextWrapper p{font-size: 20px;font-weight: 500;}
+
+  .card .btn-add span{color: white;background-color: #EB3223;border-radius: 50%;width: 30px;height: 30px;display: inline-flex;justify-content: center;align-items: center;margin: 5px;}
+  
+  /* Add Button */
+  .btn-add {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: #fff;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: black;
+    border: none;
+    padding: 2px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .left{padding: 5rem 3rem;width: 30%;}
+
+  .right{width: 75%;padding: 3rem;padding-right: 8rem;}
+  
+  /* Dropdown Wrapper */
+.dropdown-menu-custom {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 8px 0;
+  z-index: 1000;
+  width: 160px;
+
+  /* Hide by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show dropdown with animation */
+.dropdown-menu-custom.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Button Styles */
+.dropdown-menu-custom button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-menu-custom button:hover {
+  background-color: #f5f5f5;
+}
