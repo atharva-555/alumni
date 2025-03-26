@@ -9,12 +9,15 @@ header .part2 ul li .list-inline-item{margin: 0!important;} */
 /* header .part2{padding: 0;} */
 header .part2 ul li .highlight{background-color: #fff;color: var(--theme-red);border-radius: 30px;border: 1px solid white;}
 header .part2 ul li .highlight:hover{background-color: var(--theme-red);color: #fff;}
+header .part2 ul li .no-hover:hover{background: #fff;color: var(--theme-red);}
 
 /* .nav{padding: 5px;color: white;text-decoration: none;} */
 header .part2  ul {padding: 0;margin: 0;list-style: none; display: flex;gap: 1rem}
 header .part2 ul li { padding: 0;font-weight: 700;width: auto!important;}
-header .part2 ul li a{ padding: 8px 10px; border-radius: 30px;font-size: 26px; color: white;text-decoration: none;text-transform: capitalize;}
+header .part2 ul li button{padding: 0;font-weight: 700;width: auto!important;font-family: "Inria Sans", sans-serif;}
+header .part2 ul li a,header .part2 ul li  button{ padding: 8px 10px; border-radius: 30px;font-size: 26px; color: white;text-decoration: none;text-transform: capitalize;}
 header .part2 ul li a:hover{background:#fff;color:var(--theme-red);}
+
 /* header .part2 ul li a.active{ background: var(--btnBg);color: var(--secondary-color);}
 header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) ;border: 1px solid var(--btnBg) ;} */
 
@@ -30,21 +33,24 @@ header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) 
 
 @media only screen and (max-width:1280px) {
   header .part2 ul li a{font-size: 20px;padding: 8px 5px;}
+  header .part2 ul li button{font-size: 20px;padding: 8px 5px;}
 }
 
 @media only screen and (max-width:992px) {
     header  .nav-logo{max-width: 90px;}
     header .part1 a{font-size: 1.7rem;}
-    header .part2 ul li a{ font-size: 19px;padding: 8px 2px;}
+    header .part2 ul li a,header .part2 ul li button{ font-size: 19px;padding: 8px 2px;}
+    
 
   }
 
   @media only screen and (max-width:778px) {
     header  .nav-logo{max-width: 50px;}
     header .part1 a{font-size: 1.2rem;}
-    header .part2 ul li a{ font-size: 20px;padding: 8px 5px;text-decoration: none;}
+    header  ul li a{ font-size: 20px;padding: 8px 5px;text-decoration: none;}
   
-    
+    header  .sliderNavWrapper ul li button{all: unset;color: black;text-decoration: none;font-size: 20px;padding: 8px 10px;}
+
     header .part1Wrapper{position: relative;z-index: 5;}
     header .part1{width: 70%;}
 

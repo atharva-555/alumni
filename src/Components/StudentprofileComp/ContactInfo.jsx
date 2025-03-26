@@ -14,12 +14,11 @@ const ContactInfo = ({ user }) => {
       <p>
       <PersonRoundedIcon /> Alumni Reg. No.: {user.regNo}
       </p>
-      <p>
+
       <p>
         {user.gender === "Male" ? <Male /> : <Female />} {user.gender}
       </p>
 
-      </p>
       <p>
         <LocationOn /> {user.address}
       </p>

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import './mainPagesNavbar.css'
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import Logo from '../../assets/images/Logo.svg'
 import { useEffect } from 'react';
 import { useRef } from 'react';
@@ -13,11 +13,19 @@ import PeopleIcon from '@mui/icons-material/People';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { AuthContext } from "../../Context/AuthContext";
+import Button from '@mui/material/Button';
+
 
 
 const MainPagesNavbar = () => {
 
   
+  // User context
+  const { user,logout } = useContext(AuthContext);
+  const userRole = user?.role || "guest"; 
+  console.log(userRole);
 
   // Navbar active tab
   const [activeLink, setActiveLink] = useState('home');
@@ -44,7 +52,7 @@ const MainPagesNavbar = () => {
     // Responsive Open menu
     const [isOpenMenu,setisOpenMenu]=useState(false);
     const openMenu=()=>{
-      console.log("triggered");
+      // console.log("triggered");
         setisOpenMenu(true);
     }
 
@@ -79,6 +87,11 @@ const MainPagesNavbar = () => {
       setOpenDropdown(openDropdown === menu ? null : menu);
     };
 
+    // Handle  Logout
+    const navigate = useNavigate();
+
+    
+
   return (
     
     <header>
@@ -93,21 +106,13 @@ const MainPagesNavbar = () => {
           <Link to={'/login'} ><div className="signinBtn d-flex ">Sign In</div></Link>
 
             <span ><div className=' navbarToggle d-flex justify-content-center' onClick={openMenu}><MenuRoundedIcon/></div></span>
-            {/* <ul className="d-flex justify-content-center align-items-center">
-              <li className=""><Link to ="/" >Home</Link></li>
-              <li className=""><Link to ="yearbook" >Community</Link></li>
-              <li className=""><Link to ="" >Events</Link></li>
-              <li className=""><Link to ="about" className={`${activeLink === 'about' ? 'active':''}`} onClick={()=>{handleLinkClick('about')}}>About</Link></li>
-              <li className=""><Link to ="services" className={`${activeLink === 'services' ? 'active':''}`} onClick={()=>{handleLinkClick('services')}}>Login</Link></li>
-              <li className=""><Link to ="contact" className={`highlight ${activeLink === 'contact' ? 'active':''}`} onClick={()=>{handleLinkClick('contact')}}> Register </Link></li>
-            </ul> */}
           </div>
       
       </div>
 
       <nav className={`navbarOverlay ${isOpenMenu ? 'activeDark' : ''}`}>
                 <div className={`sliderNavWrapper ${isOpenMenu ? 'open' : ''}`}>
-                  <div className="row p-4 pb-0">
+                  <div className="row p-4 pl-3 pb-0">
                     <span>
                       <CloseRoundedIcon onClick={() => setisOpenMenu(false)} />
                     </span>
@@ -157,9 +162,25 @@ const MainPagesNavbar = () => {
                         <li><Link to="career" onClick={closeMenu}>Career</Link></li>
                       </ul>
                     </li>
-                    <li className="list-inline-item px-2 py-2">
+                    {/* <li className="list-inline-item px-2 py-2">
                       <Link to={'/register'} onClick={closeMenu}><span className='icon' ><VpnKeyOutlinedIcon/></span>Register</Link>
-                    </li>
+                    </li> */}
+
+                     {/* Profile,Register btn */}
+            
+                    {(userRole === "guest" || !user) && (
+                      <li className="list-inline-item px-2 py-2">
+                        <Link to={'/register'} onClick={closeMenu}><span className='icon' ><VpnKeyOutlinedIcon/></span>Register</Link>
+                      </li>
+
+                    )}
+                     {userRole === "student" && (
+                      <li className="list-inline-item px-2 py-2" ><Button onClick={logout} className="btn"><span style={{padding:"5px"}}><LogoutIcon/></span>Logout</Button></li>
+                    )}
+                    {userRole === "admin" && (
+                      <li className="list-inline-item px-2 py-2" ><span style={{padding:"5px"}}><LogoutIcon/></span><Button onClick={logout} className="btn">Logout</Button></li>
+                    )}
+                    
                   </ul>
           
           </div>
@@ -203,9 +224,30 @@ const MainPagesNavbar = () => {
               </ul>
             </li>
 
-            <li className=""><Link to ="login">Login</Link></li>
-            <li ><Link to ="register" className="highlight">Register </Link></li>
-          </ul>
+            {/* Login,Logout btn */}
+            {(userRole === "guest" || !user) && (
+              <li className=""><Link to ="/login">Login</Link></li>
+            )}
+            {userRole === "student" && (
+              <li><Button onClick={logout} className="">Logout</Button></li>
+            )}
+            {userRole === "admin" && (
+              <li><Button onClick={logout} className="">Logout</Button></li>
+            )}
+
+            {/* Profile,Register btn */}
+            
+            {(userRole === "guest" || !user) && (
+              <li><Link to="register" className="highlight">Register</Link></li>
+            )}
+            {/* Show Profile if user is a student */}
+            {userRole === "student" && (
+              <li><Link to="" className="highlight no-hover">Profile</Link></li>
+            )}
+            {/* Hide both options for admin */}
+            {userRole === "admin" && null}
+
+            </ul>
         </div>
         {/* <div className="col-1"></div> */}
       

@@ -2,17 +2,39 @@ import React from "react";
 import { LinkedIn, Facebook, Twitter } from "@mui/icons-material";
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded';
 import bgImg from '../../assets/images/gate_compressed.png'
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Button from '@mui/material/Button';
 import { useState } from "react";
 
 const ProfileHeader = ({ user }) => {
+  // GET WINDOW SIZE FOR RESPONSIVENESS
+    // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //       setWindowWidth(window.innerWidth);
+    //     };
+    
+    //     window.addEventListener('resize', handleResize);
+        
+    //     // Remove the event listener on component unmount
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //     };
+    //     }, []);
+  
+        // Dropdown
 
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showcontactDropdown, setShowcontactDropdown] = useState(false);
 
   // Toggle dropdown
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
+  };
+  // Toggle contact dropdown
+  const togglecontactDropdown = () => {
+    setShowcontactDropdown(!showcontactDropdown);
   };
 
 
@@ -46,8 +68,30 @@ const ProfileHeader = ({ user }) => {
               <Twitter />Twitter
             </a>
           </div>
+            
+          {/* Mobile view */}
+          <div className="contactDetails">
+            <p className="w-auto mb-0 " style={{ color: "grey"}}>
+              <span className="icon"><LocationOnIcon/></span> {user.location}
+            </p>
+
+            <Button className="optionsIcon"  onClick={togglecontactDropdown}> Contact <span><ArrowDropDownIcon/></span></Button>
+            <div className={`dropdown-menu-custom contact-dropdown ${showcontactDropdown ? "show" : ""}`}>
+              <a href={user.linkedIn} target="_blank" rel="">
+                <LinkedIn />LinkedIn
+              </a>
+              <a href={user.facebook} target="_blank" rel="">
+                <Facebook />Facebook
+              </a>
+              <a href={user.twitter}  target="_blank" rel="">
+                <Twitter />Twitter
+              </a>
+            </div>
+          </div>
 
         </div>
+
+        
 
 
         <div className="options">
