@@ -15,6 +15,7 @@ import './App.css'
 import { AuthContext } from './Context/AuthContext';
 import AddEmailHistory from './Pages/Addmail/Addmail.jsx'
 import JobSearch from './Pages/JobSearch/Jobsearch.jsx'
+import EmailDashboard from './Pages/Emailservice/Emailservice.jsx'
 
 
 // Lazy Loading compoments
@@ -61,6 +62,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/addmail" element={<AddEmailHistory/>}/>
             <Route path="/jobsearch" element={<JobSearch/>}/>
+            <Route path="/emailservice" element={<EmailDashboard/>}/>
 
 {/* test routes */}
             <Route path="/test" element={<Test/>}/>
