@@ -20,8 +20,8 @@ import JobSearch from './Pages/JobSearch/Jobsearch.jsx'
 // Lazy Loading compoments
 // const Layout = lazy(() => import("./Layout/Layout.jsx"));
 const Yearbook = lazy(()=> import("./Pages/Yearbook/Yearbook.jsx"))
+const Test = lazy(()=> import("./Pages/Test/Test.jsx"))
 const AdminDashboard = lazy(()=> import("./Pages/AdminDashboard/AdminDashboard.jsx"))
-// const Yearbook = lazy(()=> import("./Pages/Yearbook/Yearbook.jsx"))
 const StudentDashboard = lazy(()=> import("./Pages/StudentProfile/Studentprofile.jsx"))
 
 
@@ -61,6 +61,10 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/addmail" element={<AddEmailHistory/>}/>
             <Route path="/jobsearch" element={<JobSearch/>}/>
+
+{/* test routes */}
+            <Route path="/test" element={<Test/>}/>
+            <Route path="/loading" element={<Loading/>}/>
 
             {/* Protecting routes according to the user role */}
             {/* <Route

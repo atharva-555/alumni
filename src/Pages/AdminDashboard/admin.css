@@ -1,0 +1,158 @@
+button{text-transform: none;}
+.bgImg{filter: brightness(0.5);}
+
+
+.admin-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Background Image */
+  .bgImg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+  }
+  
+  /* Header on Top */
+  .header {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 2; /* Ensures header is on top */
+  }
+  .header h2{width: fit-content;margin: auto;font-weight: 700;font-size: 36px;}
+  
+  /* Optional: Add a dark overlay for better contrast */
+  .bgImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .navbar-container{background-color: var(--theme-red);}
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 1rem;
+  }
+  
+  .nav-btn {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    color: var(--theme-red);
+    border: none;
+    padding: 4px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 22px;font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+    text-transform: none;
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  
+  .nav-btn.active {
+    background-color: #ffffff00;
+    color: white;
+  }
+  
+
+
+   /* Active state - apply half underline */
+   .nav-btn.active::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Start from the middle */
+    bottom: 6px;
+    width: 40%; /* Half width */
+    height: 3px;
+    color: white;
+    background-color: #ffffff; /* Active underline color */
+    transform: translateX(-50%); /* Shift back to the center */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Banner */
+  .banner {
+    background: url("/assets/banner.jpg") no-repeat center/cover;
+    height: 150px;
+  }
+  
+  /* Form Container */
+  .form-container {
+    width: 60%;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Styles */
+  .event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .event-form label {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .event-form input,
+  .event-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .event-form textarea {
+    height: 120px;
+  }
+  
+  .date-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .date-container div {
+    width: 48%;
+  }
+  
+  .btn-submit {
+    background-color: #7c0c0c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .btn-submit:hover {
+    background-color: #ff4d4f;
+  }
+  

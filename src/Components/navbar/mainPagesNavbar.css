@@ -21,11 +21,11 @@ header .part2 ul li a:hover{background:#fff;color:var(--theme-red);}
 /* header .part2 ul li a.active{ background: var(--btnBg);color: var(--secondary-color);}
 header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) ;border: 1px solid var(--btnBg) ;} */
 
-.communityDropdownWrapper,.eventsDropdownWrapper,.aboutDropdownWrapper{flex-direction: column;position: relative;}
-.dropdown{padding: 5px;background-color: #fff;border-radius: 6px;display: flex;flex-direction: column;position: absolute!important;gap: 5px!important;z-index: 2;width: 100%;visibility: hidden;opacity: 0;transition: all 0.3s ease-in-out;top: 120%;}
+.communityDropdownWrapper,.eventsDropdownWrapper,.aboutDropdownWrapper,.jobsDropdownWrapper{flex-direction: column;position: relative;}
+.dropdown{padding: 5px;background-color: #fff;border-radius: 6px;display: flex;flex-direction: column;position: absolute!important;gap: 5px!important;z-index: 2;width: max-content;visibility: hidden;opacity: 0;transition: all 0.3s ease-in-out;top: 120%;}
 .dropdown li{padding: 10px!important;border-radius: 6px!important;}
 .dropdown li:hover{background-color: #f6f6f6;}
-.dropdown a{color: black!important;padding: 0px!important;}
+.dropdown a{color: black!important;padding:0 10px!important;}
 .dropdown a:hover{background-color: #f6f6f6!important;}
 /* .communityDropdownMenu a:hover{} */
 .DropdownWrapper:hover .dropdown {visibility: visible;opacity: 1;}

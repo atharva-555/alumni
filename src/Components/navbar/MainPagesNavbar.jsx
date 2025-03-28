@@ -124,6 +124,7 @@ const MainPagesNavbar = () => {
                       </Link>
                     </li>
 
+
                     {/* COMMUNITY */}
                     <li className="list-inline-item px-2 py-2">
                       <Link to="#" onClick={() => toggleDropdown('community')}>
@@ -197,6 +198,16 @@ const MainPagesNavbar = () => {
         <div className="col-7 d-flex align-items-center part2 m-auto">
           <ul className="d-flex justify-content-center align-items-center ">
             {/* <li className=""><Link to ="/"   className={`${activeLink === 'home' ? 'active' : ''}`} onClick={() => handleLinkClick('home')} aria-current="home">Home</Link></li> */}
+ 
+            <li className="jobsDropdownWrapper d-flex justify-content-center DropdownWrapper">
+              <Link to ="" >Jobs<span className='icon'><ArrowDropDownIcon/></span></Link>
+              <ul className="jobsDropdownMenu dropdown" >
+                <Link to=""><li>Yearbook</li></Link>
+                <Link to=""><li>Chapters</li></Link>
+                <Link to=""><li>Map</li></Link>
+              </ul>
+            </li>
+
             <li className="communityDropdownWrapper d-flex justify-content-center DropdownWrapper">
               <Link to ="" >Community<span className='icon'><ArrowDropDownIcon/></span></Link>
               <ul className="communityDropdownMenu dropdown" >
@@ -245,7 +256,9 @@ const MainPagesNavbar = () => {
               <li><Link to="" className="highlight no-hover">Profile</Link></li>
             )}
             {/* Hide both options for admin */}
-            {userRole === "admin" && null}
+            {userRole === "admin" && (
+               <li><Link to="" className="highlight no-hover">Admin</Link></li>
+            )}
 
             </ul>
         </div>
