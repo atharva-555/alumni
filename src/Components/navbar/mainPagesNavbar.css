@@ -1,22 +1,22 @@
 header{background: var(--theme-red);}
 header  .nav-logo{max-width: 125px;}
-header .part1 a{text-decoration: none;color: #fff;font-size: 2rem;}
+header .part1 a{text-decoration: none;color: #fff;font-size: 1.8rem;}
 
 header .part1{font-weight: 700;}
 
 /* header .part2{ }
 header .part2 ul li .list-inline-item{margin: 0!important;} */
-/* header .part2{padding: 0;} */
+header .part2{padding: 0!important;}
 header .part2 ul li .highlight{background-color: #fff;color: var(--theme-red);border-radius: 30px;border: 1px solid white;}
 header .part2 ul li .highlight:hover{background-color: var(--theme-red);color: #fff;}
 header .part2 ul li .no-hover:hover{background: #fff;color: var(--theme-red);}
 
 /* .nav{padding: 5px;color: white;text-decoration: none;} */
-header .part2  ul {padding: 0;margin: 0;list-style: none; display: flex;gap: 1rem}
+header .part2  ul {padding: 0;margin: 0;list-style: none; display: flex;gap: 0.5rem}
 header .part2 ul li { padding: 0;font-weight: 700;width: auto!important;}
 header .part2 ul li button{padding: 0;font-weight: 700;width: auto!important;font-family: "Inria Sans", sans-serif;}
-header .part2 ul li a,header .part2 ul li  button{ padding: 8px 10px; border-radius: 30px;font-size: 26px; color: white;text-decoration: none;text-transform: capitalize;}
-header .part2 ul li a:hover{background:#fff;color:var(--theme-red);}
+header .part2 ul li a,header .part2 ul li  button{ padding: 8px 10px; border-radius: 30px;font-size: 24px; color: white;text-decoration: none;text-transform: capitalize;}
+header .part2 ul li a:hover,header .part2 ul li button:hover{background:#fff;color:var(--theme-red);}
 
 /* header .part2 ul li a.active{ background: var(--btnBg);color: var(--secondary-color);}
 header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) ;border: 1px solid var(--btnBg) ;} */
@@ -28,17 +28,18 @@ header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) 
 .dropdown a{color: black!important;padding:0 10px!important;}
 .dropdown a:hover{background-color: #f6f6f6!important;}
 /* .communityDropdownMenu a:hover{} */
-.DropdownWrapper:hover .dropdown {visibility: visible;opacity: 1;}
+.DropdownWrapper:hover .dropdown {visibility: visible;opacity: 1;z-index: 5;}
 
 
 @media only screen and (max-width:1280px) {
+  header  .nav-logo{max-width: 100px;}
   header .part2 ul li a{font-size: 20px;padding: 8px 5px;}
   header .part2 ul li button{font-size: 20px;padding: 8px 5px;}
 }
 
 @media only screen and (max-width:992px) {
-    header  .nav-logo{max-width: 90px;}
-    header .part1 a{font-size: 1.7rem;}
+    header  .nav-logo{max-width: 80px;}
+    header .part1 a{font-size: 1.4rem;}
     header .part2 ul li a,header .part2 ul li button{ font-size: 19px;padding: 8px 2px;}
     
 

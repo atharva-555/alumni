@@ -1,16 +1,58 @@
 import React from 'react'
-import { Button } from "@mui/material";
+import { Button, Menu, MenuItem  } from "@mui/material";
 import bgImg from '../../assets/images/gate_compressed.png'
 import './admin.css'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import Emailservice from '../Emailservice/Emailservice.jsx';
+import CreateEvent from '../Event/Event.jsx';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
 const Admin = () => {
   // set active Tab
-  const [activeTab,setactiveTab]=useState(null);
+  const [activeTab,setactiveTab]=useState("createEvent");
   const handleSelection=(tab)=>{
     setactiveTab(tab);
   }
+
+    // State to handle screen width
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 992);
+    // State for dropdown menu
+    const [anchorEl, setAnchorEl] = useState(null);
+
+      // Handle dropdown open/close
+    const handleDropdownClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+
+    const handleCloseDropdown = () => {
+      setAnchorEl(null);
+    };
+
+     // Track screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 992);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+   // Render content based on activeTab
+   const renderContent = () => {
+    switch (activeTab) {
+      case "mailingService":
+        return <Emailservice />;
+      case "registerations":
+        return <h3>Registrations Section</h3>;
+      case "database":
+        return <h3>Database Section</h3>;
+      case "createEvent":
+        return <CreateEvent />;
+      default:
+        return <h3>Welcome to the Admin Portal! Please select a tab.</h3>;
+    }
+  };
 
   return (
     <>
@@ -25,22 +67,75 @@ const Admin = () => {
     </div>
     <div className="navbar-container">
       <div className="nav-links">
+        <Button  onClick={() => handleSelection("createEvent")} className={`nav-btn ${activeTab === "createEvent" ? "active" : ""}`} >
+          Create an event
+        </Button>
         <div to="/"  className={`nav-btn ${activeTab==="service"?'active':''} `}>
           Dashboard
         </div>
         <Button onClick={() => handleSelection("mailingService")} className={`nav-btn ${activeTab === "mailingService" ? "active" : ""}`}>
           Mailing Service
         </Button>
-        <Button  className="nav-btn" >
+        <Button  onClick={() => handleSelection("registerations")} className={`nav-btn ${activeTab === "registerations" ? "active" : ""}` } >
           Registrations
         </Button>
-        <Button className="nav-btn" >
+        {/* <Button onClick={() => handleSelection("database")} className={`nav-btn ${activeTab === "database" ? "active" : ""}`} >
           Database
-        </Button>
-        <Button  className="nav-btn active" >
-          Create an event
-        </Button>
+        </Button> */}
+
+         {/* Show Database as Dropdown if screen is small */}
+         {isSmallScreen ? (
+            <>
+              <Button
+                onClick={handleDropdownClick}
+                className={`dropdwn-btn ${activeTab === "database" ? "active" : ""}`}
+              >
+                <ArrowDropDownIcon/>
+              </Button>
+              <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleCloseDropdown}
+                // Ensure dropdown opens correctly below button
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'center',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'center',
+                }}
+                getContentAnchorEl={null} // Prevents unwanted full width
+                PaperProps={{
+                  sx: {
+                    width: 'auto', // Content fits width properly
+                    minWidth: '150px',
+                    boxShadow: 3,
+                    borderRadius: '8px',
+                    mt: 0.5,
+                    fontFamily: "'Inria Sans', sans-serif",
+                  },
+                }}
+                
+              >
+                <MenuItem onClick={() => handleSelection("database")}>
+                   Database                
+                </MenuItem>
+              </Menu>
+            </>
+          ) : (
+            <Button
+              onClick={() => handleSelection("database")}
+              className={`nav-btn ${activeTab === "database" ? "active" : ""}`}
+            >
+              Database
+            </Button>
+          )}
+
       </div>
+    </div>
+    <div className="servicesWrapper py-4">
+      {renderContent()}
     </div>
     </>
   )

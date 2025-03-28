@@ -192,19 +192,20 @@ const MainPagesNavbar = () => {
 
 {windowWidth > 778 && 
       <div className = "row  m-0">
-        <div className = "col-5 d-flex justify-content-center align-items-center part1 m-auto">
+        <div className = "col-4 d-flex justify-content-center align-items-center part1 m-auto">
           <Link to='/' className=' d-flex justify-content-center align-items-center'><img className="nav-logo" alt="" src={Logo}/>PVPIT CONNECT</Link>
         </div>
-        <div className="col-7 d-flex align-items-center part2 m-auto">
+        <div className="col-8 d-flex align-items-center part2 m-auto">
           <ul className="d-flex justify-content-center align-items-center ">
             {/* <li className=""><Link to ="/"   className={`${activeLink === 'home' ? 'active' : ''}`} onClick={() => handleLinkClick('home')} aria-current="home">Home</Link></li> */}
  
+            <li className=""><Link to ="/">Home</Link></li>
+
             <li className="jobsDropdownWrapper d-flex justify-content-center DropdownWrapper">
               <Link to ="" >Jobs<span className='icon'><ArrowDropDownIcon/></span></Link>
               <ul className="jobsDropdownMenu dropdown" >
-                <Link to=""><li>Yearbook</li></Link>
-                <Link to=""><li>Chapters</li></Link>
-                <Link to=""><li>Map</li></Link>
+                <Link to="jobsearch"><li>Job Search</li></Link>
+                <Link to="post-job"><li>Add an Opportunity</li></Link>
               </ul>
             </li>
 
