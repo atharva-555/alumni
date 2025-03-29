@@ -20,6 +20,7 @@ import Addmailservice from './Pages/Addmail/Addmail.jsx'
 import AdminDashboard from './Pages/AdminDashboard/AdminDashboard.jsx'
 import StudentDashboard from './Pages/StudentProfile/Studentprofile.jsx'
 import Yearbook from './Pages/Yearbook/Yearbook.jsx'
+import PendingRegistrations from './Pages/PendingRegistration/PendingRegistrations.jsx'
 
 // Lazy Loading compoments
 
@@ -66,6 +67,7 @@ function App() {
             <Route path="/addmail" element={<AddEmailHistory/>}/>
             <Route path="/jobsearch" element={<JobSearch/>}/>
             <Route path="/emailservice" element={<EmailDashboard/>}/>
+            <Route path="/pendingregistration" element={<PendingRegistrations/>}/>
 
             {/* test routes */}
             <Route path="/test" element={<Test/>}/>
