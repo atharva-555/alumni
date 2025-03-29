@@ -168,4 +168,18 @@ button{text-transform: none;}
       
   
   }
+  @media only screen and (max-width:778px) {
+    .nav-btn {font-size: 14px;padding: 4px 5px;width: 170px;}
+    .nav-links{gap: 0.4rem;padding: 10px;} 
+    .header h2 {font-size: 26px;}
+  
+  }
+
+  @media only screen and (max-width:380px) {
+
+    .nav-btn {font-size: 12px;padding: 4px;width: 120px;margin: 0;height: 50px;border-radius: 4px;display: flex;align-items: center;}
+    .nav-links{gap: 8px;padding: 12px;} 
+    .dropdwn-btn {height: 50px;}
+    .header h2 {font-size: 22px;}
+  }
   

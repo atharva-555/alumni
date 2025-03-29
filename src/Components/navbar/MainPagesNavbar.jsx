@@ -13,6 +13,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { AuthContext } from "../../Context/AuthContext";
 import Button from '@mui/material/Button';
@@ -102,8 +103,21 @@ const MainPagesNavbar = () => {
           <div className = " d-flex justify-content-flex-start align-items-center part1 m-auto">
             <Link to='/' className=' d-flex justify-content-flex-start align-items-center'><img className="nav-logo" alt="" src={Logo}/>PVPIT CONNECT</Link>
           </div>
-          <div className=" d-flex align-items-center justify-content-center part2 m-auto">
-          <Link to={'/login'} ><div className="signinBtn d-flex ">Sign In</div></Link>
+         
+      <div className=" d-flex align-items-center justify-content-end part2 m-auto">
+            {(userRole === "guest" || !user) && (
+              <li className="list-inline-item px-2 py-2">
+                <Link to={'/login'} ><div className="signinBtn d-flex ">Sign In</div></Link>
+              </li>
+
+            )}
+            {/* {(userRole === "admin" ) && (
+              <li className="list-inline-item px-2 py-2">
+                <Link to={''} ><div className="signinBtn d-flex ">Hello,Admin</div></Link>
+              </li>
+
+            )} */}
+            {/* <Link to={'/login'} ><div className="signinBtn d-flex ">Sign In</div></Link> */}
 
             <span ><div className=' navbarToggle d-flex justify-content-center' onClick={openMenu}><MenuRoundedIcon/></div></span>
           </div>
@@ -118,11 +132,33 @@ const MainPagesNavbar = () => {
                     </span>
                   </div>
                   <ul className="list list-inline mt-3">
+                    
                     <li className="list-inline-item px-2 py-2">
                       <Link to="/" onClick={closeMenu}>
                         <span className="icon"><HomeOutlinedIcon /></span> Home
                       </Link>
                     </li>
+
+                    {userRole === "admin" && (
+                      // <li className="jobsDropdownWrapper d-flex justify-content-center DropdownWrapper">
+                      //   <Link to ="" >Jobs<span className='icon'><ArrowDropDownIcon/></span></Link>
+                      //   <ul className="jobsDropdownMenu dropdown" >
+                      //     <Link to="jobsearch"><li>Job Search</li></Link>
+                      //     <Link to="post-job"><li>Add an Opportunity</li></Link>
+                      //   </ul>
+                      // </li>
+
+                        <li className="list-inline-item px-2 py-2">
+                        <Link to="#" onClick={() => toggleDropdown('jobs')}>
+                          <span className="icon"><WorkOutlineOutlinedIcon /></span> Jobs
+                          <span className={`icon ${openDropdown === 'jobs' ? 'rotate' : ''}`}><ArrowDropDownIcon /></span>
+                        </Link>
+                        <ul className={`dropdown jobsDropdownMenu ${openDropdown === 'jobs' ? 'show' : ''}`}>
+                          <Link to="jobsearch" onClick={closeMenu} ><li>Job Search</li></Link>
+                          <Link to="post-job" onClick={closeMenu} ><li>Add an Opportunity</li></Link>
+                        </ul>
+                      </li>
+                    )}
 
 
                     {/* COMMUNITY */}
@@ -201,13 +237,14 @@ const MainPagesNavbar = () => {
  
             <li className=""><Link to ="/">Home</Link></li>
 
+            {userRole === "admin" && (
             <li className="jobsDropdownWrapper d-flex justify-content-center DropdownWrapper">
               <Link to ="" >Jobs<span className='icon'><ArrowDropDownIcon/></span></Link>
               <ul className="jobsDropdownMenu dropdown" >
                 <Link to="jobsearch"><li>Job Search</li></Link>
                 <Link to="post-job"><li>Add an Opportunity</li></Link>
               </ul>
-            </li>
+            </li>)}
 
             <li className="communityDropdownWrapper d-flex justify-content-center DropdownWrapper">
               <Link to ="" >Community<span className='icon'><ArrowDropDownIcon/></span></Link>

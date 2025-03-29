@@ -13,6 +13,7 @@ const Admin = () => {
   const [activeTab,setactiveTab]=useState("createEvent");
   const handleSelection=(tab)=>{
     setactiveTab(tab);
+
   }
 
     // State to handle screen width
@@ -76,9 +77,7 @@ const Admin = () => {
         <Button onClick={() => handleSelection("mailingService")} className={`nav-btn ${activeTab === "mailingService" ? "active" : ""}`}>
           Mailing Service
         </Button>
-        <Button  onClick={() => handleSelection("registerations")} className={`nav-btn ${activeTab === "registerations" ? "active" : ""}` } >
-          Registrations
-        </Button>
+        
         {/* <Button onClick={() => handleSelection("database")} className={`nav-btn ${activeTab === "database" ? "active" : ""}`} >
           Database
         </Button> */}
@@ -114,22 +113,40 @@ const Admin = () => {
                     borderRadius: '8px',
                     mt: 0.5,
                     fontFamily: "'Inria Sans', sans-serif",
+                    justifyContent: 'flex-start', // Align text to the left
                   },
                 }}
                 
               >
-                <MenuItem onClick={() => handleSelection("database")}>
-                   Database                
-                </MenuItem>
+               <MenuItem
+                onClick={() => {
+                  handleSelection("registerations");
+                  handleCloseDropdown(); // Close dropdown after clicking
+                }}
+                className={`nav-btn ${activeTab === "registerations" ? "" : ""}`}
+              >
+                Registrations
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleSelection("database");
+                  handleCloseDropdown(); // Close dropdown after clicking
+                }}
+                className={`nav-btn ${activeTab === "database" ? "" : ""}`}
+              >
+                Database
+              </MenuItem>
               </Menu>
             </>
           ) : (
-            <Button
-              onClick={() => handleSelection("database")}
-              className={`nav-btn ${activeTab === "database" ? "active" : ""}`}
-            >
+            <>
+            <Button  onClick={() => handleSelection("registerations")} className={`nav-btn ${activeTab === "registerations" ? "active" : ""}` } >
+              Registrations
+            </Button>
+            <Button onClick={() => handleSelection("database")} className={`nav-btn ${activeTab === "database" ? "active" : ""}`}>
               Database
             </Button>
+            </>
           )}
 
       </div>
