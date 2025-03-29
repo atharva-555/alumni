@@ -212,7 +212,7 @@ const MainPagesNavbar = () => {
 
                     )}
                      {userRole === "student" && (
-                      <li className="list-inline-item px-2 py-2" ><Button onClick={logout} className="btn"><span style={{padding:"5px"}}><LogoutIcon/></span>Logout</Button></li>
+                      <li className="list-inline-item px-2 py-2" ><Button onClick={()=>{logout();closeMenu();}} className="btn"><span style={{padding:"5px"}}><LogoutIcon/></span>Logout</Button></li>
                     )}
                     {userRole === "admin" && (
                       <li className="list-inline-item px-2 py-2" ><span style={{padding:"5px"}}><LogoutIcon/></span><Button onClick={logout} className="btn">Logout</Button></li>

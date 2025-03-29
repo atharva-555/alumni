@@ -50,7 +50,7 @@ header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) 
     header .part1 a{font-size: 1.2rem;}
     header  ul li a{ font-size: 16px;padding: 8px 5px;text-decoration: none;}
   
-    header  .sliderNavWrapper ul li button{all: unset;color: black;text-decoration: none;font-size: 20px;padding: 8px 10px;}
+    header  .sliderNavWrapper ul li button{all: unset;color: black;text-decoration: none;font-size: 16px;padding: 8px 10px;}
 
     header .part1Wrapper{position: relative;z-index: 5;}
     header .part1{width: 70%;}
@@ -62,7 +62,7 @@ header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) 
     header .part2 .navbarToggle{ padding: 0 10px;  justify-content: flex-end;}
 
     header .navbarOverlay,.sliderNavWrapper{ top: 0;right: 0;width: 100%;height: 100vh; background-color:#fff; display: flex;justify-content: center; }
-    header .navbarOverlay{  position: absolute;background-color: rgba(0, 0, 0, 0.8);opacity: 0;}
+    header .navbarOverlay{  position: absolute;background-color: rgba(0, 0, 0, 0.8);opacity: 0;display: none;}
     header .activeDark{opacity: 1!important;z-index: 1000;display: block;position: fixed;height: 100vh;}
     header .sliderNavWrapper{width: 60%!important;right: -100%;transition: all 0.3s ease-in-out; position: fixed}
     header .sliderNavWrapper .list-inline-item a{display: flex; align-items: center ;text-decoration: none;color: black;}
