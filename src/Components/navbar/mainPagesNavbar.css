@@ -104,7 +104,7 @@ header .part2 ul li a.active:hover{ background: transparent; color:var(--btnBg) 
     }
 
 
-    footer{padding: 0 30px;}
+  
   }
 
   @media only screen and (max-width:380px) {

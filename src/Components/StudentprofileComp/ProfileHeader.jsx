@@ -46,7 +46,7 @@ const ProfileHeader = ({ user }) => {
         <img src={bgImg} alt="" />
       </div>
       <div className="profileInfoWrpper d-flex">
-        <div className="profile-img">
+        <div className="stud-profile-img">
           <img src={user.profileImg} alt="Profile" />
         </div>
         <div className="profile-info">

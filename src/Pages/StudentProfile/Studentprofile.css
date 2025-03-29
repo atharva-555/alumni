@@ -10,7 +10,7 @@ body {
   .contact-card a{text-decoration: none;}
   .contact-card svg{font-size: 26px;}
 
-  .profile-container {
+  .stud-profile-container {
     width: 100%;
     background-color: #fff;
     border-radius: 12px;
@@ -44,9 +44,9 @@ body {
 
   .profileInfoWrpper {padding: 10px 90px;}
   
-  .profile-img{height: 200px!important;}
+  .stud-profile-img{height: 200px!important;}
 
-  .profile-img img {
+  .stud-profile-img img {
  
     transform: translateY(-50%);
     width: 300px;
@@ -231,7 +231,7 @@ body {
   .card .cardtextWrapper h5 {font-size: 22px;}
   .institute-logo, .experience-logo {max-width: 220px;max-height: 220px;}
   .right {padding-right: 5rem;}
-  .profile-img img {max-width: 240px;max-height: 240px;}
+  .stud-profile-img img {max-width: 240px;max-height: 240px;}
   .left{padding: 5rem 2rem;}
   .profile-header .options{margin-right: 2rem;}
 }
@@ -241,7 +241,7 @@ body {
   .profile-info p {font-size: 20px;}
 
   .profileInfoWrpper {padding: 10px 0px;padding-left: 10px;}
-  .profile-img img {max-width: 220px;max-height: 220px;}
+  .stud-profile-img img {max-width: 220px;max-height: 220px;}
   .left{width: 38%;padding-right: 0.2rem;}
   .right {padding-right: 2rem;}
   .dropdown-menu-custom {left: auto;}
@@ -250,11 +250,11 @@ body {
 }
 
 @media only screen and (max-width:778px) {
-  .profile-img img {
+  .stud-profile-img img {
     max-width: 100px;
     max-height: 100px;
 }
-.profile-img{height: auto!important;width: auto!important;}
+.stud-profile-img{height: auto!important;width: auto!important;}
 .profile-info{width: 160%;}
 .profile-info h2 {font-size: 21px;margin: 5px 0;}
 .profile-info p {font-size: 16px;}

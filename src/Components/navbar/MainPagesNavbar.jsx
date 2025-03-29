@@ -181,7 +181,7 @@ const MainPagesNavbar = () => {
                         <span className={`icon ${openDropdown === 'events' ? 'rotate' : ''}`}><ArrowDropDownIcon /></span>
                       </Link>
                       <ul className={`dropdown eventsDropdownMenu ${openDropdown === 'events' ? 'show' : ''}`}>
-                        <li><Link to="events" onClick={closeMenu}>Alumni Events</Link></li>
+                        <li><Link to="/" onClick={closeMenu}>Alumni Events</Link></li>
                         <li><Link to="feed" onClick={closeMenu}>Campus Feed</Link></li>
                         <li><Link to="gallery" onClick={closeMenu}>Gallery</Link></li>
                       </ul>
@@ -215,7 +215,7 @@ const MainPagesNavbar = () => {
                       <li className="list-inline-item px-2 py-2" ><Button onClick={()=>{logout();closeMenu();}} className="btn"><span style={{padding:"5px"}}><LogoutIcon/></span>Logout</Button></li>
                     )}
                     {userRole === "admin" && (
-                      <li className="list-inline-item px-2 py-2" ><span style={{padding:"5px"}}><LogoutIcon/></span><Button onClick={logout} className="btn">Logout</Button></li>
+                      <li className="list-inline-item px-2 py-2" ><span style={{padding:"5px"}}><LogoutIcon/></span><Button onClick={()=>{logout();closeMenu();}} className="btn">Logout</Button></li>
                     )}
                     
                   </ul>
@@ -258,7 +258,7 @@ const MainPagesNavbar = () => {
             <li className="eventsDropdownWrapper d-flex justify-content-center DropdownWrapper">
               <Link to ="" >   Events   <span className='icon'><ArrowDropDownIcon/></span></Link>
               <ul className="eventsDropdownMenu dropdown">
-                <Link to="events"><li>Alumni Events</li></Link>
+                <Link to="/"><li>Alumni Events</li></Link>
                 <Link to="feed"><li>Campus Feed</li></Link>
                 <Link to="gallery"><li>Gallery</li></Link>
               </ul>

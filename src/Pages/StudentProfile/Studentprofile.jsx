@@ -9,7 +9,7 @@ const Studentprofile = () => {
      // Sample user data
     const user = {
     name: "Babdoo Raut",
-    profileImg:"/src/assets/images/profileImg.png",
+    profileImg:"/src/assets/images/profileImg.jpg",
     course: "B.Tech. 2020 - 2019, CSE",
     location: "Pune, Maharashtra",
     email: "prkorade@gmail.com",
@@ -35,7 +35,7 @@ const Studentprofile = () => {
   };
 
   return (
-    <div className="profile-container">
+    <div className="stud-profile-container">
       <ProfileHeader user={user} />
       
       <div className="d-flex">

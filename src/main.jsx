@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+// import { StrictMode } from 'react'
 import React from "react";
 import { createRoot } from 'react-dom/client'
 import './main.scss'
@@ -15,11 +15,11 @@ createRoot(document.getElementById('root')).render(
   // <BrowserRouter>
   //   <App />
   // </BrowserRouter>
-  <React.StrictMode>
+  // <React.StrictMode>
     <AuthProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </AuthProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 )

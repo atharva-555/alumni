@@ -16,14 +16,17 @@ import { AuthContext } from './Context/AuthContext';
 import AddEmailHistory from './Pages/Addmail/Addmail.jsx'
 import JobSearch from './Pages/JobSearch/Jobsearch.jsx'
 import EmailDashboard from './Pages/Emailservice/Emailservice.jsx'
-
+import Addmailservice from './Pages/Addmail/Addmail.jsx'
+import AdminDashboard from './Pages/AdminDashboard/AdminDashboard.jsx'
+import StudentDashboard from './Pages/StudentProfile/Studentprofile.jsx'
+import Yearbook from './Pages/Yearbook/Yearbook.jsx'
 
 // Lazy Loading compoments
-// const Layout = lazy(() => import("./Layout/Layout.jsx"));
-const Yearbook = lazy(()=> import("./Pages/Yearbook/Yearbook.jsx"))
+
+// const Yearbook = lazy(()=> import("./Pages/Yearbook/Yearbook.jsx"))
 const Test = lazy(()=> import("./Pages/Test/Test.jsx"))
-const AdminDashboard = lazy(()=> import("./Pages/AdminDashboard/AdminDashboard.jsx"))
-const StudentDashboard = lazy(()=> import("./Pages/StudentProfile/Studentprofile.jsx"))
+// const AdminDashboard = lazy(()=> import("./Pages/AdminDashboard/AdminDashboard.jsx"))
+// const StudentDashboard = lazy(()=> import("./Pages/StudentProfile/Studentprofile.jsx"))
 
 
 function App() {
@@ -64,9 +67,10 @@ function App() {
             <Route path="/jobsearch" element={<JobSearch/>}/>
             <Route path="/emailservice" element={<EmailDashboard/>}/>
 
-{/* test routes */}
+            {/* test routes */}
             <Route path="/test" element={<Test/>}/>
             <Route path="/loading" element={<Loading/>}/>
+            <Route path="/addmailservice" element={<Addmailservice/>}/>
 
             {/* Protecting routes according to the user role */}
             {/* <Route

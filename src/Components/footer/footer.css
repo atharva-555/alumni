@@ -46,3 +46,8 @@ footer .heading a{color: #fff;text-decoration: none;}
     footer .part3 .heading p{padding-top: 10px;}
 
 }
+@media only screen and (max-width:380px) {
+  footer{padding: 0 10px;}
+  footer .footerWrapper{margin: auto;}
+  footer .part2,.part3,.part4{padding: 10px!important;}
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import './home.css'
 import mainGateImg from '../../assets/images/mainGate_compressed.png'
-import ConvocationImg from '../../assets/images/convocation_compressed.png'
+import ConvocationImg from '../../assets/images/convocation_compressed.jpg'
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
 import GroupsIcon from '@mui/icons-material/Groups';
@@ -15,7 +15,7 @@ const Home = () => {
       {/* Image Section - Maintains Original Height */}
       <img src={mainGateImg} alt="PVPIT Alumni" className="w-100 d-block" style={{ height: "auto" }} />
 
-      <div className="position-relative text-white p-5 floatTitle">
+      <div className="position-relative text-white floatTitle">
         <p className="pb-3 hometxt">Home</p>
         <h2 className="fw-bold">Alumni</h2>
         <p className="mb-0">Forging lasting bonds</p>

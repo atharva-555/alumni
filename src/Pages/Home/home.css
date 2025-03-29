@@ -1,5 +1,5 @@
 .bg-image{height:100%!important}
-.floatTitle{width: 40%!important;left: 15%!important; transform: translateY(-50%);background-color: var(--theme-red)!important;z-index: 2!important;}
+.floatTitle{width: 40%!important;left: 15%!important; transform: translateY(-50%);background-color: var(--theme-red)!important;z-index: 2!important;padding: 2rem 3rem;}
 .floatTitle p{font-size: 2rem;font-weight: 700;}
 .floatTitle h2{font-size: 4.2rem;}
 .shortDesc{transform: translateY(-50%);}
@@ -39,6 +39,7 @@ font-weight: 700;text-transform: uppercase;font-family: "Poppins", sans-serif;fo
     .tpoDescWrapper h3{font-size: 30px;}
     .tpoDescWrapper p{font-size: 24px;}
     .tpoDescWrapper h4{font-size: 24px;}
+    .shortDesc{transform: translateY(-40%);}
     
   }
 
@@ -57,6 +58,8 @@ font-weight: 700;text-transform: uppercase;font-family: "Poppins", sans-serif;fo
     .tpoDescWrapper h3{font-size: 28px;}
     .tpoDescWrapper p{font-size: 20px;}
     .tpoDescWrapper h4{font-size: 20px;}
+
+    .shortDesc{transform: translateY(-30%);}
     
     
   }
@@ -72,9 +75,9 @@ font-weight: 700;text-transform: uppercase;font-family: "Poppins", sans-serif;fo
     .ctaWrapper h3{height: 80px;}
     .ctaWrap{flex-direction: column;margin: auto;}
 
-    .tpoDescWrapper{margin: auto;padding: 20px 10px;  }
+    .tpoDescWrapper{margin: auto!important;padding: 20px ;  }
     .tpoDescWrapper img{  transform: translateX(-5px) translateY(5px);}
-    .tpoDescWrapper h3{padding: 15px 0!important;}
+    .tpoDescWrapper h3{padding: 25px 0 0 0!important;font-size: 22px;}
     .tpoDescWrapper p{font-size: 16px;}
 
     .imageShowcaseWrapper {padding: 40px 20px;}
