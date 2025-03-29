@@ -14,6 +14,8 @@ font-weight: 700;text-transform: uppercase;font-family: "Poppins", sans-serif;fo
 
 .ctaWrapper .ctaIcon{font-size:140px;}
 
+.ctaWrapper a{text-decoration: none;width: min-content;color: white;}
+
 .tpoDescWrapper{padding: 70px;}
 .tpoDescWrapper .imgBG{background-color: var(--theme-dark);}
 .tpoDescWrapper img{transform: translateX(-10px) translateY(10px);}
@@ -72,8 +74,9 @@ font-weight: 700;text-transform: uppercase;font-family: "Poppins", sans-serif;fo
     .shortDesc {transform: translateY(-15%); }
     .shortDesc strong{font-family: "Arial", sans-serif!important;font-weight: 700!important;}
 
-    .ctaWrapper h3{height: 80px;}
+    .ctaWrapper h3{height: 50px;}
     .ctaWrap{flex-direction: column;margin: auto;}
+    .ctaWrapper a {width: 70%;padding-bottom: 20px;}
 
     .tpoDescWrapper{margin: auto!important;padding: 20px ;  }
     .tpoDescWrapper img{  transform: translateX(-5px) translateY(5px);}
@@ -87,6 +90,10 @@ font-weight: 700;text-transform: uppercase;font-family: "Poppins", sans-serif;fo
     .infoWrapper .designation {font-size: 16px!important;}
     .profileWrapper{display: flex;}
 
+  }
+
+  @media only screen and (max-width:380px) {
+    .ctaWrapper a {width: max-content;padding: 0px!important;}
 
   }
 

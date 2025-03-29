@@ -7,6 +7,7 @@ import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOu
 import GroupsIcon from '@mui/icons-material/Groups';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import tpoImg from '../../assets/images/tpo_compressed.png'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -38,30 +39,41 @@ const Home = () => {
     </div>
 
     <div className="ctaWrapper">
-      <div className="row px-5 py-3 ctaWrap">
-        <div className="col d-flex flex-column justify-content-center align-items-center px-4  h-100">
-          <span ><ArticleOutlinedIcon className='ctaIcon'/></span>
-          <h3>NewsLetter</h3>
-          <p>Take a look at the past and upcoming  events, as well as testimonials and more.</p>
-        </div>
+      <div className="row px-5 py-3 ctaWrap m-auto">
+        <Link className='col d-flex flex-column justify-content-center align-items-center px-4  h-100'>
+          <div className="">
+            <span ><ArticleOutlinedIcon className='ctaIcon'/></span>
+            <h3>NewsLetter</h3>
+            <p>Take a look at the past and upcoming  events, as well as testimonials and more.</p>
+          </div>
+        </Link>
 
-        <div className="col d-flex flex-column justify-content-center align-items-center px-4 h-100">
-          <span ><WorkspacePremiumOutlinedIcon className='ctaIcon'/></span>
-          <h3>ALUMNI DIRECTORY</h3>
-          <p>Our Alumni have distinguished themselves in various walks of life</p>
-        </div>
+        <Link className='col d-flex flex-column justify-content-center align-items-center px-4  h-100'>
+          <div className=" ">
+            <span ><WorkspacePremiumOutlinedIcon className='ctaIcon'/></span>
+            <h3>ALUMNI DIRECTORY</h3>
+            <p>Our Alumni have distinguished themselves in various walks of life</p>
+          </div>
+        </Link>
+        
 
-        <div className="col d-flex flex-column justify-content-center align-items-center px-4 h-100">
-          <span ><GroupsIcon className='ctaIcon'/></span>
-          <h3>ALUMNI  BODY</h3>
-          <p>Take a glimpse at the people working behind the scenes</p>
-        </div>
+        <Link className='col d-flex flex-column justify-content-center align-items-center px-4  h-100'>
+          <div className="">
+            <span ><GroupsIcon className='ctaIcon'/></span>
+            <h3>ALUMNI  BODY</h3>
+            <p>Take a glimpse at the people working behind the scenes</p>
+          </div>
+        </Link>
+        
 
-        <div className="col d-flex flex-column justify-content-center align-items-center px-4 h-100">
-          <span ><AccountCircleIcon className='ctaIcon'/></span>
-          <h3>CONNECT</h3>
-          <p>Sign In or Sign Up into our portal</p>
-        </div>
+        <Link className='col d-flex flex-column justify-content-center align-items-center px-4  h-100'>
+          <div className=" ">
+            <span ><AccountCircleIcon className='ctaIcon'/></span>
+            <h3>CONNECT</h3>
+            <p>Sign In or Sign Up into our portal</p>
+          </div>
+        </Link>
+        
       </div>
     </div>
 
