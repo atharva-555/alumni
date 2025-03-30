@@ -38,7 +38,7 @@
   }
   
   .addjob textarea {
-    height: 150px; /* Increased height for description */
+    height: 150px; 
     resize: vertical;
   }
   .job-Info {
@@ -69,7 +69,7 @@
   .job-submit {
     margin-top: 15px;
     padding: 10px;
-    background: #8b0000;
+    background:  var(--theme-red);
     color: #fff;
     font-size: 16px;
     border: none;
@@ -100,7 +100,7 @@
         width: 100%;
     }
     .job-date-container {
-      flex-direction: row; /* Keep Start and End Date in One Row */
+      flex-direction: row; 
       gap: 10px;
     }
   
@@ -113,7 +113,7 @@
   }
    
     .job-submit {
-      width: 30% !important /* Ensures submit button remains 20-30% */
+      width: 30% !important 
     }
   }
   

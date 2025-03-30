@@ -25,16 +25,16 @@
     width: 100%;
 }
 
-/* Each label-select pair */
+
 .emailservice-ield-group {
     display: flex;
-    flex-direction: column; /* Ensures label is above select */
-    flex: 1; /* Makes all fields equal width */
+    flex-direction: column; 
+    flex: 1; 
     min-width: 150px;
 }
 .emailservice-form label {
     font-weight: bold;
-    color: maroon;
+    color: var(--theme-red);
 }
 
 .emailservice-form select {
@@ -44,7 +44,7 @@
 }
 
 .emailservice-form button {
-    background: maroon;
+    background:  var(--theme-red);
     color: white;
     padding: 10px 15px;
     border: none;
@@ -57,7 +57,7 @@
 
 .emailservice-form .emailservice-note {
     text-align: center;
-    color: maroon;
+    color:  var(--theme-red);
     font-size: 18px;
 }
 
@@ -72,7 +72,7 @@
 .email-records-title{
     text-align: center;
     margin: 60px;
-    color: maroon;
+    color: var(--theme-red);
     position: relative;
     font-weight: bold;
 }
@@ -82,7 +82,7 @@
     display: block;
     width: 5%; 
     height: 2px;
-    background-color: maroon;
+    background-color:  var(--theme-red);
     margin: 10px auto 0; 
 }
 
@@ -96,7 +96,7 @@
 
 
 .email-records th{
-    background-color: maroon;
+    background-color: var(--theme-red);
    
 }
 
@@ -105,47 +105,47 @@
     height:50px;
 }
 
-/* Apply styles for screens smaller than 768px */
+
 @media screen and (max-width: 768px) {
-    /* Center and stack form elements */
+   
     .emailservice-form {
-        width: 95%; /* Reduce width for better fit */
+        width: 95%; 
         padding: 15px;
     }
 
     .emailservice-grid {
-        flex-direction: column; /* Stack form fields */
+        flex-direction: column;
         gap: 15px;
     }
 
     .emailservice-field-group {
-        width: 100%; /* Make each field take full width */
+        width: 100%; 
     }
 
     .emailservice-form button {
-        width: 100%; /* Make button full width */
+        width: 100%; 
         padding: 12px;
     }
 
-    /* Adjust table for small screens */
+   
     .email-records {
         width: 100%;
-        overflow-x: auto; /* Enable horizontal scrolling */
-        display: block; /* Prevent table from breaking */
+        overflow-x: auto; 
+        display: block; 
     }
 
     .email-records-title {
-        margin: 30px; /* Reduce margin for small screens */
+        margin: 30px; 
         font-size: 20px;
     }
 
     .email-records th, 
     .email-records td {
-        font-size: 14px; /* Reduce text size */
+        font-size: 14px; 
         padding: 8px;
     }
 
     .email-records-title::after {
-        width: 20%; /* Make the line under title slightly longer */
+        width: 20%; 
     }
 }

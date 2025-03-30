@@ -22,7 +22,7 @@
   
   .jobsearch-subtitle {
     font-size: 18px;
-    color: #b22222;
+    color:  var(--theme-red);
     font-weight: 600;
     margin-bottom: 20px;
   }
@@ -44,7 +44,7 @@
   .job-search-btn {
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #d9534f;
+    background-color:  var(--theme-red);
     color: white;
     border: none;
     border-radius: 5px;
@@ -66,13 +66,13 @@
   }
   @media (max-width: 768px) {
     .jobsearch-container {
-        width: 90%; /* Make it take more width on small screens */
-        height: auto; /* Adjust height for better spacing */
+        width: 90%; 
+        height: auto; 
         padding: 15px;
     }
 
     .jobsearch-title {
-        font-size: 22px; /* Smaller title */
+        font-size: 22px; 
     }
 
     .jobsearch-subtitle {
@@ -82,11 +82,11 @@
   
     .jobsearch-dropdown {
         font-size: 9px;
-        width: 90%; /* Make dropdowns full-width */
+        width: 90%; 
     }
 
     .job-search-btn {
-        width: 50px; /* Reduce button width */
+        width: 50px; 
         height: 40px;
         display: flex;
         align-items: center;

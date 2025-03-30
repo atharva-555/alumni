@@ -17,7 +17,7 @@
   .alumni-form label {
     margin-top: 10px;
     font-weight: bold;
-    color: #8b0000;
+    color: var(--theme-red);
   }
   
   .alumni-form input,
@@ -31,7 +31,7 @@
   }
   
   .alumni-form textarea {
-    height: 150px; /* Increased height for description */
+    height: 150px; 
     resize: vertical;
   }
   
@@ -47,7 +47,7 @@
   .alumni-submit {
     margin-top: 15px;
     padding: 10px;
-    background: #8b0000;
+    background: var(--theme-red);
     color: #fff;
     font-size: 16px;
     border: none;
@@ -99,10 +99,11 @@
     width: 20%;
     cursor: pointer;
     font-size: 14px;
+    text-align: center;
   }
   
   .alumni-browse-btn input {
-    display: none; /* Hide default file input */
+    display: none;
   }
   
   .alumni-browse-btn:hover {
@@ -114,7 +115,7 @@
       width: 100%;
     }
     .alumni-date-container {
-      flex-direction: row; /* Keep Start and End Date in One Row */
+      flex-direction: row; 
       gap: 10px;
     }
   
@@ -127,7 +128,7 @@
     }
   
     .alumni-submit {
-      width: 30% !important /* Ensures submit button remains 20-30% */
+      width: 30% !important ;
     }
   }
   

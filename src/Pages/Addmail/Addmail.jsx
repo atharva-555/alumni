@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./addmail.css"; // External CSS file for styling
+import "./addmail.css"; 
 
 export default function AddEmailHistory  () {
   const [formData, setFormData] = useState({

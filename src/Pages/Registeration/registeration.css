@@ -1,5 +1,5 @@
 .reg-heading{
-    color: #831619;
+    color: var(--theme-red);;
     display: inline-block; 
     position: relative;
     padding-top: 4%;
@@ -11,11 +11,11 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50%;  /* Start from the center */
-    width: 10%;  /* Adjust the length of the underline */
-    height: 3px; /* Thickness of the line */
-    background-color: #831619; /* Color of the underline */
-    transform: translateX(-50%); /* Centering the underline */
+    left: 50%; 
+    width: 10%;  
+    height: 3px; 
+    background-color: var(--theme-red); 
+    transform: translateX(-50%); 
 }
 .reg-container {
     width: 50%;
@@ -23,10 +23,11 @@
     padding: 30px;
     margin: auto;
     border-radius: 10px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 35px;
   }
  .reg-section-title {
-    color: #831619;
+    color:  var(--theme-red);
     margin-bottom: 10px;
     text-align: left;
   }
@@ -44,7 +45,7 @@
     margin: 10px auto;
   }
   .reg-input-row.full-width input, .reg-input-row.full-width select {
-    height: 50px; /* Increase height of input boxes */
+    height: 50px; 
   }
   .reg-label {
     display: block;
@@ -67,8 +68,8 @@
   
   .reg-gender-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align to the left */
+    flex-direction: column; 
+    align-items: flex-start; 
   }
   
   .reg-gender-label {
@@ -154,15 +155,15 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 20%; /* Ensures consistent button size */
+    width: 20%; 
   }
   
   .reg-browse-btn input {
-    display: none; /* Hide the default file input */
+    display: none;
   }
   
   .reg-browse-btn:hover {
-    background: #7a7a7a; /* Slightly darker gray on hover */
+    background: #7a7a7a; 
   }
   
  
@@ -180,7 +181,7 @@
     margin: 0;
   }
   .reg-submit {
-    background-color:#831619;
+    background-color: var(--theme-red);;
     color: white;
     padding: 5px 10px;
     border-radius: 40px;
@@ -196,13 +197,13 @@
   .reg-location-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 10px; /* Space between dropdowns */
+    gap: 10px; 
     align-items: center;
   }
   
 
   .reg-location-grid select {
-    width: 100%; /* Ensures dropdowns take full width inside label */
+    width: 100%;
   }
   .reg-required{
     color: red;
@@ -220,7 +221,7 @@
       text-align: center;
     }
     .reg-heading::after {
-      width: 30%; /* Make underline wider on small screens */
+      width: 30%; 
     }
   
     .reg-container {
@@ -229,13 +230,13 @@
     }
   
     .reg-input-grid {
-      grid-template-columns: 1fr; /* Stack inputs on small screens */
+      grid-template-columns: 1fr; 
       gap: 20px;
     }
   
     .reg-half-width, 
     .reg-input-row.reg-full-width {
-      width: 100%; /* Make all inputs full width on mobile */
+      width: 100%; 
     }
   
     .reg-gender-options {
