@@ -26,7 +26,7 @@ const MainPagesNavbar = () => {
   // User context
   const { user,logout } = useContext(AuthContext);
   const userRole = user?.role || "guest"; 
-  console.log(userRole);
+  // console.log(userRole);
 
   // Navbar active tab
   const [activeLink, setActiveLink] = useState('home');

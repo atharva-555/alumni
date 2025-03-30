@@ -39,7 +39,7 @@ const Home = () => {
     </div>
 
     <div className="ctaWrapper">
-      <div className="row px-5 py-3 ctaWrap m-auto">
+      <div className="row px-5 py-3 ctaWrap m-auto align-content-center">
         <Link className='col d-flex flex-column justify-content-center align-items-center px-4  h-100'>
           <div className="">
             <span ><ArticleOutlinedIcon className='ctaIcon'/></span>

@@ -26,7 +26,7 @@ const Footer = () => {
             <hr style={{ border: "2px solid white", width: "100%" ,opacity:1,margin:'0',marginBottom:'5px'}} />
             <p className='py-2'>S No 33/22, Pune Pirangut Road, next to Chandani Chowk, Bavdhan, Pune, Maharashtra 411021.</p>
             {/* <img className='py-2 px-2 mapImg' src={MapImg} alt="" />  */}
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.648955002263!2d73.77167661127456!3d18.499553669742316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2be5faaaaaaab%3A0x858e71c09987358e!2sPADMABHOOSHAN%20VASANTDADA%20PATIL%20INSTITUTE%20OF%20TECHNOLOGY%20(PVPIT)!5e0!3m2!1sen!2sin!4v1743268426355!5m2!1sen!2sin" width="500" height="150"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.648955002263!2d73.77167661127456!3d18.499553669742316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2be5faaaaaaab%3A0x858e71c09987358e!2sPADMABHOOSHAN%20VASANTDADA%20PATIL%20INSTITUTE%20OF%20TECHNOLOGY%20(PVPIT)!5e0!3m2!1sen!2sin!4v1743268426355!5m2!1sen!2sin" width="500" height="150"allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             <p className='pt-2 text-center'>Get Directions</p>        
           </div>
         </div>

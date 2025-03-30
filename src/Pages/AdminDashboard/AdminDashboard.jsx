@@ -6,6 +6,7 @@ import { useState,useEffect } from 'react';
 import Emailservice from '../Emailservice/Emailservice.jsx';
 import CreateEvent from '../Event/Event.jsx';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import PendingRegisterations from '../PendingRegistration/PendingRegistrations.jsx'
 
 
 const Admin = () => {
@@ -45,7 +46,7 @@ const Admin = () => {
       case "mailingService":
         return <Emailservice />;
       case "registerations":
-        return <h3>Registrations Section</h3>;
+        return <PendingRegisterations/>
       case "database":
         return <h3>Database Section</h3>;
       case "createEvent":
