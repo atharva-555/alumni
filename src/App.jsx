@@ -21,6 +21,7 @@ import AdminDashboard from './Pages/AdminDashboard/AdminDashboard.jsx'
 import StudentDashboard from './Pages/StudentProfile/Studentprofile.jsx'
 import Yearbook from './Pages/Yearbook/Yearbook.jsx'
 import PendingRegistrations from './Pages/PendingRegistration/PendingRegistrations.jsx'
+import Database from './Pages/Database/Database.jsx'
 
 // Lazy Loading compoments
 
@@ -68,6 +69,7 @@ function App() {
             <Route path="/jobsearch" element={<JobSearch/>}/>
             <Route path="/emailservice" element={<EmailDashboard/>}/>
             <Route path="/pendingregistration" element={<PendingRegistrations/>}/>
+            <Route path="/database" element={<Database/>}/>
 
             {/* test routes */}
             <Route path="/test" element={<Test/>}/>

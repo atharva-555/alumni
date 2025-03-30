@@ -1,0 +1,143 @@
+
+
+.database-container {
+    width: 800px;
+    max-width: 1200px;
+    margin:   auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.database-header {
+    margin-top: 50px;
+    position: relative; 
+   margin-bottom: 8%; 
+    justify-content: space-between;
+}
+
+
+.database-h1 {
+    text-align: center;
+    font-size: 24px;
+    position: absolute;
+    color:var(--theme-red);
+}
+
+.database-h1::after {
+    content: "";
+    display: block;
+    width: 10%; 
+    height: 2px;
+    background-color: var(--theme-red);
+    margin-left: 45%;
+}
+.database-recent-actions {
+    color:var(--theme-red);
+    text-decoration: underline;
+    text-decoration-color: blue; 
+    cursor: pointer;
+    position: absolute;
+    right: 10; 
+    margin-left: 65%;
+    margin-top: 3%;
+}
+
+
+.database-section{
+    margin-top: -18px;
+}
+
+.database-section-title {
+    width: calc(100% + 40px); 
+    background-color:var(--theme-red);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    margin-left: -20px; 
+    box-sizing: border-box; 
+}
+
+.database-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: var(--theme-red);;
+    border-bottom: 1px solid #ddd;
+}
+
+.database-button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    align-items: center;
+
+}
+
+.database-icon-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+
+.database-add-button, .database-change-button {
+    background-color:var(--theme-red);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.database-add-button:hover, .database-change-button:hover {
+    background-color: #a00000;
+}
+
+
+.database-add-icon {
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 5px;
+}
+.database-edit-icon{
+    color: darkgoldenrod;
+}
+
+@media (max-width: 768px) {
+    .database-h1{
+        margin-top: 5px;
+        font-size: 20px;
+    }
+    .database-recent-actions{
+        margin-top: 12%;
+        font-size: 15px;
+    }
+   
+    .database-container{
+        width: 100%;
+        margin-top: 35%;
+    }
+    .database-section{
+        margin-bottom: 10%;
+    }
+    .database-section-title{
+        font-size: 13px;
+    }
+    .database-item{
+        font-size: 10px;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 0; /* Ensures no extra left padding */
+        margin-left: 0;
+    }
+    .database-section ul {
+        padding-left: 0; /* Removes default UL padding */
+    }
+}
