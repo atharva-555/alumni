@@ -177,8 +177,8 @@ button{text-transform: none;}
 
   @media only screen and (max-width:380px) {
  
-    .nav-btn {font-size: 12px;padding: 4px;width: 120px;margin: 0;height: 50px;border-radius: 4px;display: flex;align-items: center;}
-    .nav-links{gap: 8px;padding: 12px;} 
+    .nav-btn {font-size: 12px!important;padding: 4px!important;width: 120px!important;margin: 0!important;height: 50px!important;border-radius: 4px!important;display: flex!important;align-items: center!important;}
+    .nav-links{gap: 8px!important;padding: 12px!important;} 
     .dropdwn-btn {height: 50px;}
     .header h2 {font-size: 22px;}
   }

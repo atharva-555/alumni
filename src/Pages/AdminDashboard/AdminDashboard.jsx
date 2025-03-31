@@ -7,6 +7,7 @@ import Emailservice from '../Emailservice/Emailservice.jsx';
 import CreateEvent from '../Event/Event.jsx';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import PendingRegisterations from '../PendingRegistration/PendingRegistrations.jsx'
+import Database from '../Database/Database.jsx'
 
 
 const Admin = () => {
@@ -48,7 +49,7 @@ const Admin = () => {
       case "registerations":
         return <PendingRegisterations/>
       case "database":
-        return <h3>Database Section</h3>;
+        return <Database/>;
       case "createEvent":
         return <CreateEvent />;
       default:
