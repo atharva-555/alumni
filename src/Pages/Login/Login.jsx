@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { Close } from "@mui/icons-material"; 
 
 import "./login.css";
 
@@ -11,7 +12,8 @@ export default function Signup() {
   const { login } = useContext(AuthContext);
 
   const navigate = useNavigate();
-  const [role, setRole] = useState("student"); // Default to student
+  const [role, setRole] = useState("student"); 
+  const [showForgotPassword, setShowForgotPassword] = useState(false);// Default to student
 
   const handleLogin = (formData) => {
     const userData = {
@@ -32,6 +34,14 @@ export default function Signup() {
     rollNo: "",
     password: "",
   });
+  
+  const [forgotPasswordData, setForgotPasswordData] = useState({
+    email: "",
+    newPassword: "",
+    confirmPassword: "",
+  });
+
+
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     setFormData({
@@ -39,11 +49,24 @@ export default function Signup() {
       [name]: type === "file" ? files[0] : value,
     });
   };
+  const handleForgotPasswordChange = (e) => {
+    const { name, value } = e.target;
+    setForgotPasswordData({ ...forgotPasswordData, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     handleLogin(formData);
+  };
+  const handleForgotPasswordSubmit = (e) => {
+    e.preventDefault();
+    if (forgotPasswordData.newPassword !== forgotPasswordData.confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+    console.log("Password reset for:", forgotPasswordData);
+    setShowForgotPassword(false); // Close modal after submission
   };
 
   return (
@@ -83,7 +106,7 @@ export default function Signup() {
           />
           
 
-          <a href="#" className="forgot-password">Forgot password?</a>
+          <a href="#" className="forgot-password"  onClick={() => setShowForgotPassword(true)}>Forgot password?</a>
 
           <button type="submit" className="signin-btn">SIGN IN</button>
         </form>
@@ -95,6 +118,49 @@ export default function Signup() {
           REGISTER HERE
         </button>
       </div>
+
+      {showForgotPassword && (
+  <div className="modal-overlay">
+    <div className="modal-container">
+    <Close className="close-icon" onClick={() => setShowForgotPassword(false)} />
+      <h3>Reset Password</h3>
+      <form onSubmit={handleForgotPasswordSubmit}>
+        <label>Email <span className="signin-required">*</span></label>
+        <input 
+          type="email" 
+          className="signin-input" 
+          name="email" 
+          placeholder="Enter your email" 
+          required 
+          onChange={handleForgotPasswordChange} 
+        />
+
+        <label>New Password <span className="signin-required">*</span></label>
+        <input 
+          type="password" 
+          className="signin-input" 
+          name="newPassword" 
+          placeholder="Enter new password" 
+          required 
+          onChange={handleForgotPasswordChange} 
+        />
+
+        <label>Confirm Password <span className="signin-required">*</span></label>
+        <input 
+          type="password" 
+          className="signin-input" 
+          name="confirmPassword" 
+          placeholder="Re-enter new password" 
+          required 
+          onChange={handleForgotPasswordChange} 
+        />
+
+        <button type="submit" className="forget-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+)}
+
     </div>
   );
 }

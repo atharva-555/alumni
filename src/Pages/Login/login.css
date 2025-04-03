@@ -122,7 +122,74 @@
     background-color: #5d1414;
   }
 
- 
+ /* Forgot Password Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.modal-container h3 {
+  color: var(--theme-red);
+  margin-bottom: 15px;
+}
+
+.modal-container label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--theme-red);
+  margin-top: 10px;
+}
+
+.modal-container .signin-input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-container .signin-btn {
+  width: 100%;
+  margin-top: 15px;
+}
+.forget-btn{
+  width: 50%;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: var(--theme-red);
+  color: white;
+}
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 34px !important;
+  cursor: pointer;
+  color: #414040 !important;
+}
+
+.close-icon:hover {
+  color: var(--theme-red) !important;
+}
   
   @media (max-width: 768px) {
     .signin-box, .signin-register-box {
@@ -155,4 +222,18 @@
     .signin-btn{
       padding: 10px 45px !important;
     }
+    .modal-container {
+      width: 80%;
+      padding: 15px; /* Reduce padding */
+    }
+    .modal-container h3{
+      font-size: 20px;
+    }
+  
+    .close-icon {
+      font-size: 25px !important; /* Reduce icon size */
+      top: 15px;
+      right: 5px;
+    }
+  
   }
