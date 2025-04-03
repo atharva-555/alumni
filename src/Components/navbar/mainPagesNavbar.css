@@ -1,6 +1,6 @@
 header{background: var(--theme-red);}
-header  .nav-logo{max-width: 125px;}
-header .part1 a{text-decoration: none;color: #fff;font-size: 1.8rem;}
+header  .nav-logo{max-width: 95px;}
+header .part1 a{text-decoration: none;color: #fff;font-size: 24px;}
 
 header .part1{font-weight: 700;}
 

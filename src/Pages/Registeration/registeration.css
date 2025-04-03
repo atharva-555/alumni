@@ -34,7 +34,7 @@
   .reg-half-width {
     display: block;
     text-align: left;
-    width: 50%;
+    width: 47%;
     margin: 10px 0; 
   }
   
@@ -101,9 +101,13 @@
   .reg-Working_options{
     display: flex;
     flex-direction: row;
+    text-align: center;
     gap: 20px;
   }
-
+  .reg-label-1{
+    font-weight: bold;
+  }
+  
 
 .copy_add {
     display: flex;

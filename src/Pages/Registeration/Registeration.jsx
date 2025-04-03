@@ -321,7 +321,7 @@ export default function RegistrationForm() {
             Working Status<span  className="reg-required">*</span>
           </label>
           <div className="reg-Working_options">
-            <labe className="reg-label">
+            <labe className="reg-label-1">
               <input
                 type="radio"
                 name="workingStatus"
@@ -332,7 +332,7 @@ export default function RegistrationForm() {
               />{" "}
               Is Working
             </labe>
-            <label className="reg-label">
+            <label className="reg-label-1">
               <input
                 type="radio"
                 name="workingStatus"
@@ -343,7 +343,7 @@ export default function RegistrationForm() {
               />{" "}
               Is Pursuing Higher Studies
             </label>
-            <label className="reg-label">
+            <label className="reg-label-1">
               <input
                 type="radio"
                 name="workingStatus"
