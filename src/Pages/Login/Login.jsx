@@ -31,7 +31,6 @@ export default function Signup() {
 
   const [formData, setFormData] = useState({
     email: "",
-    rollNo: "",
     password: "",
   });
   
@@ -85,16 +84,7 @@ export default function Signup() {
           />
          
 
-          <label className="signin-label">Roll no. <span className="signin-required">*</span></label>
-          <input 
-            type="text" 
-             className="signin-input"
-            name="rollNo" 
-            placeholder="Enter your roll number" 
-            required
-            onChange={handleChange} 
-          />
-          
+    
           <label className="signin-label">Password <span className="signin-required">*</span></label>
           <input 
             type="password"

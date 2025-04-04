@@ -26,6 +26,8 @@ export default function RegistrationForm() {
     linkedIn: "",
     profilePicture: null,
     agreement: false,
+    password: "",
+    confirmpassword: "",
   });
 
   const handleCheckboxChange = () => {
@@ -47,10 +49,22 @@ export default function RegistrationForm() {
     e.preventDefault();
     let newErrors = {};
 
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
     if (!formData.profilePicture) {
       newErrors.profilePicture = "Profile picture is required";
     }
   
+    if (!passwordRegex.test(formData.password)) {
+      newErrors.password =
+        "Password must be at least 8 characters long, with at least one uppercase letter, one lowercase letter, one number, and one special character.";
+    }
+
+    if (formData.password !== formData.confirmpassword) {
+      newErrors.confirmpassword = "Passwords do not match.";
+    }
+
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors); // Update errors state
       return;
@@ -401,6 +415,32 @@ export default function RegistrationForm() {
           </div>
           {errors.profilePicture && <p className="reg-error-message">{errors.profilePicture}</p>}
 
+          <div className="reg-input-grid">
+          <label className="reg-label">
+              Set Password:<span className="reg-required">*</span>
+              <input
+                type="password"
+                placeholder="Set your password"
+                name="password"
+                required
+                onChange={handleChange}
+              />
+              {errors.password && <p className="reg-error-message">{errors.password}</p>}
+            </label>
+
+            <label className="reg-label">
+              Confirm Password:<span className="reg-required">*</span>
+              <input
+                type="password"
+                placeholder="Confirm your password"
+                name="confirmpassword"
+                required
+                onChange={handleChange}
+              />
+              {errors.confirmpassword && <p className="reg-error-message">{errors.confirmpassword}</p>}
+            </label>
+            </div>
+
           {/* Checkbox */}
           <label className="reg-checkbox-container">
             <input
@@ -412,6 +452,8 @@ export default function RegistrationForm() {
             I will update my information at regular inetrvals and will engage in the Alumni network actively
             <span  className="reg-required">*</span>
           </label>
+
+          
 
           <button className="reg-submit" type="submit" >Submit</button>
         </form>
