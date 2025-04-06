@@ -64,7 +64,7 @@ const Admin = () => {
         <img src={bgImg} alt="" />
       </div>
       <div className="header">
-        <h2>Admin Portal<hr style={{border: '2px solid white',position:'relative',margin:'auto', width: '50%',marginTop:'5px',opacity: 1}}/></h2>
+      <h2>Admin Portal<hr style={{border: '2px solid white',position:'relative',margin:'auto', width: '50%',marginTop:'5px',opacity: 1}}/></h2>
         
       </div>
     </div>
