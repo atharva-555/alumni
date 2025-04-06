@@ -6,13 +6,14 @@
     margin-bottom: 40px;
     color:  var(--theme-dark);
     font-size: 28px;
+    font-weight: bold;
 }
 
 .registration-card {
     display: flex;
     padding: 20px;
     width: 800px;
-    border: 1px solid black;
+    border: 1px solid rgb(138, 138, 138);
     margin: 0px auto;
     background-color: white;
     align-items: stretch;

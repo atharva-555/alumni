@@ -1,5 +1,6 @@
 import React from 'react';
 import RegistrationCard from './RegistrationCard';
+import pendingProfile from '../../assets/images/pendingprofile.png'
 
 export default function PendingRegistrations ()  {
   const registrations = [
@@ -12,7 +13,7 @@ export default function PendingRegistrations ()  {
       arn: '103453423',
       joinedDate: 'April 3, 2024, 8:15 AM',
       linkedin: 'https://www.linkedin.com',
-      profilePic: 'https://randomuser.me/api/portraits/men/32.jpg'
+      profilePic: pendingProfile
     },
     {
       name: 'Shivam Korade',
@@ -23,7 +24,7 @@ export default function PendingRegistrations ()  {
       arn: '103453423',
       joinedDate: 'April 3, 2024, 8:15 AM',
       linkedin: 'https://www.linkedin.com',
-      profilePic: 'https://randomuser.me/api/portraits/men/32.jpg'
+      profilePic: pendingProfile
     }
   ];
 
