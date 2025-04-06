@@ -14,6 +14,7 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { AuthContext } from "../../Context/AuthContext";
 import Button from '@mui/material/Button';
@@ -160,6 +161,19 @@ const MainPagesNavbar = () => {
                       </li>
                     )}
 
+                      {userRole === "student" && (
+                      // <li className="jobsDropdownWrapper d-flex justify-content-center DropdownWrapper">
+                      //   <Link to ="" >Jobs<span className='icon'><ArrowDropDownIcon/></span></Link>
+                      //   <ul className="jobsDropdownMenu dropdown" >
+                      //     <Link to="jobsearch"><li>Job Search</li></Link>
+                      //     <Link to="post-job"><li>Add an Opportunity</li></Link>
+                      //   </ul>
+                      // </li>
+
+                      <li className="list-inline-item px-2 py-2">
+                        <Link to='studentprofile' onClick={closeMenu}><span className='icon' ><AccountCircleIcon/></span>Profile</Link>
+                      </li>
+                    )}
 
                     {/* COMMUNITY */}
                     <li className="list-inline-item px-2 py-2">
@@ -181,7 +195,7 @@ const MainPagesNavbar = () => {
                         <span className={`icon ${openDropdown === 'events' ? 'rotate' : ''}`}><ArrowDropDownIcon /></span>
                       </Link>
                       <ul className={`dropdown eventsDropdownMenu ${openDropdown === 'events' ? 'show' : ''}`}>
-                        <li><Link to="/" onClick={closeMenu}>Alumni Events</Link></li>
+                        <li><Link to="" onClick={closeMenu}>Alumni Events</Link></li>
                         <li><Link to="feed" onClick={closeMenu}>Campus Feed</Link></li>
                         <li><Link to="gallery" onClick={closeMenu}>Gallery</Link></li>
                       </ul>
@@ -258,7 +272,7 @@ const MainPagesNavbar = () => {
             <li className="eventsDropdownWrapper d-flex justify-content-center DropdownWrapper">
               <Link to ="" >   Events   <span className='icon'><ArrowDropDownIcon/></span></Link>
               <ul className="eventsDropdownMenu dropdown">
-                <Link to="/"><li>Alumni Events</li></Link>
+                <Link to=""><li>Alumni Events</li></Link>
                 <Link to="feed"><li>Campus Feed</li></Link>
                 <Link to="gallery"><li>Gallery</li></Link>
               </ul>
@@ -291,7 +305,7 @@ const MainPagesNavbar = () => {
             )}
             {/* Show Profile if user is a student */}
             {userRole === "student" && (
-              <li><Link to="" className="highlight no-hover">Profile</Link></li>
+              <li><Link to="studentprofile" className="highlight no-hover">Profile</Link></li>
             )}
             {/* Hide both options for admin */}
             {userRole === "admin" && (

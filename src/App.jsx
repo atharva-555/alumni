@@ -22,6 +22,8 @@ import StudentDashboard from './Pages/StudentProfile/Studentprofile.jsx'
 import Yearbook from './Pages/Yearbook/Yearbook.jsx'
 import PendingRegistrations from './Pages/PendingRegistration/PendingRegistrations.jsx'
 import Database from './Pages/Database/Database.jsx'
+import { Navigate } from 'react-router-dom'
+
 
 // Lazy Loading compoments
 
@@ -44,7 +46,7 @@ function App() {
       } else if (user?.role === "admin") {
         return <AdminDashboard />;
       } else if (user?.role === "student") {
-        return <StudentDashboard />;
+        return <GuestHome />;
       } else {
         return <GuestHome />; // Fallback if the role is invalid
       }
@@ -70,6 +72,7 @@ function App() {
             <Route path="/emailservice" element={<EmailDashboard/>}/>
             <Route path="/pendingregistration" element={<PendingRegistrations/>}/>
             <Route path="/database" element={<Database/>}/>
+            <Route path="/studentprofile"  element={user?.role === "student" ? <StudentDashboard /> : <Navigate to="/"/>}/>
 
             {/* test routes */}
             <Route path="/test" element={<Test/>}/>
