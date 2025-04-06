@@ -4,16 +4,15 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 40px;
-    color:  var(--theme-red);
-    font-size: 32px;
+    color:  var(--theme-dark);
+    font-size: 28px;
 }
 
 .registration-card {
     display: flex;
     padding: 20px;
     width: 800px;
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 1px solid black;
     margin: 0px auto;
     background-color: white;
     align-items: stretch;
@@ -42,18 +41,21 @@
     flex-direction: column;
     align-items: flex-start;
     margin-top: 0;
+    font-weight: bold
 }
 
 .reg-card-user-info h2, .reg-card-user-info p, .user-info a {
     margin: 0;
 }
 .reg-card-user-info h2{
-    font-size: 20px;
+    font-size: 23px;
+    font-weight: bold
 }
 .reg-card-user-info a {
-    color: #0073b1;
+    color: #076ba0;
     text-decoration: none;
-    margin-top: 5px;
+   
+    font-weight: bold
 }
 
 .reg-card-user-info a:hover {
@@ -75,7 +77,8 @@
 }
 .reg-card-right-section p,
 .reg-card-right-section a {
-    margin: 3px 0; 
+    margin: 0; 
+    font-weight: bold
 }
 .reg-card-linkedin-link {
     display: flex;
@@ -107,7 +110,7 @@
 
 /* Styling the buttons */
 .reg-card-approve, .reg-card-decline {
-    background-color: #006400;
+    background-color:  #228B22;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -121,15 +124,15 @@
 }
 
 .reg-card-decline {
-    background-color:  var(--theme-red);
+    background-color:  rgb(102, 15, 15);
 }
 
 .reg-card-approve:hover {
-    background-color: #228B22;
+    background-color: #006400;
 }
 
 .reg-card-decline:hover {
-    background-color: #B22222;
+    background-color: var(--theme-red);
 }
 .reg-card-bold{
     font-weight: bold;

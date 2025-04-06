@@ -40,33 +40,43 @@ export default function Addjob() {
         <label>
           Type <span className="job-required">*</span>
         </label>
-        <input type="text" name="type" required onChange={handleChange} />
-        </div>
+        <select name="type" onChange={handleChange}>
+          <option value="" disabled selected>select an option</option>
+          <option value="Full-Time">Full-Time</option>
+          <option value="Part-Time">Part-Time</option>
+          <option value="Internship">Internship</option>
+        </select>
+     </div>
         <div>
         <label>
           Role <span className="job-required">*</span>
         </label>
-        <input type="text" name="role" required onChange={handleChange} />
+        <select name="role" onChange={handleChange}>
+          <option value="" disabled selected>select an option</option>
+          <option value="Web-developer">Web Developer</option>
+          <option value="Full-stack">Full stack</option>
+          <option value="Frontend-Developer">Frontend Developer</option>
+        </select>
         </div>
         <div>
         <label>
         Company <span className="job-required">*</span>
         </label>
-        <input type="text" name="company" required onChange={handleChange} />
+        <input type="text" name="company" required onChange={handleChange} placeholder="company name"/>
         </div>
         <div>
         <label>
           Location <span className="job-required">*</span>
         </label>
-        <input type="text" name="location" required onChange={handleChange} />
+        <input type="text" name="location" required onChange={handleChange} placeholder="location" />
         </div>
         </div>
 
          <label>
           Link To Apply <span className="job-required">*</span>
         </label>
-        <input type="text" name="link" required onChange={handleChange} />
-
+        <input type="text" name="link" required onChange={handleChange} placeholder="paste the link to apply" />
+ 
 
 
 
@@ -78,6 +88,7 @@ export default function Addjob() {
           name="description"
           required
           onChange={handleChange}
+          placeholder="Description"
         />
 
         <div className="job-details">

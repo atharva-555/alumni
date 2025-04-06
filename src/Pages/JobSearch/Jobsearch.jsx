@@ -15,7 +15,7 @@ export default function JobSearch  ()  {
       <div className="jobsearch-filters">
         {/* Position Dropdown */}
         <select className="jobsearch-dropdown" value={position} onChange={(e) => setPosition(e.target.value)}>
-          <option>Any position</option>
+          <option value="" >Any position</option>
           <option>Frontend Developer</option>
           <option>Backend Developer</option>
           <option>Full Stack Developer</option>
@@ -23,7 +23,7 @@ export default function JobSearch  ()  {
 
         {/* Role Dropdown */}
         <select className="jobsearch-dropdown" value={role} onChange={(e) => setRole(e.target.value)}>
-          <option>Any role</option>
+          <option value="" >Any role</option>
           <option>Intern</option>
           <option>Junior</option>
           <option>Senior</option>

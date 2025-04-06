@@ -39,6 +39,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 30%;
+    font-weight: bold;
   }
   
   .job-search-btn {
@@ -59,11 +60,12 @@
   
   .job-no-posts {
     margin-top:-30px;
-    font-size: 16px;
-    color: #666;
+    font-size: 20px;
+    font-weight: bold;
     margin-bottom: 40px;
     text-align: center;
   }
+  
   @media (max-width: 768px) {
     .jobsearch-container {
         width: 90%; 
