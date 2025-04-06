@@ -12,9 +12,9 @@
     margin-bottom: 50px;
   }
   .job-heading{
-    font-size: 20px; 
+    font-size: 25px; 
     text-align: center;
-    color: var(--theme-red);
+    color: var(--theme-dark);
     font-weight: bold;
     margin-bottom: 30px;
   }
