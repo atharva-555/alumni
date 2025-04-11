@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link,useNavigate } from 'react-router-dom';
+import { Link,useNavigate,useLocation } from 'react-router-dom';
 import './mainPagesNavbar.css'
 import { useState,useContext } from 'react';
 import Logo from '../../assets/images/Logo.svg'
@@ -22,6 +22,16 @@ import Button from '@mui/material/Button';
 
 
 const MainPagesNavbar = () => {
+
+  // Hover 
+  const [hoveredDropdown, setHoveredDropdown] = useState(null);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setHoveredDropdown(null); // Close on route change
+  }, [location.pathname]);
+
 
   
   // User context
@@ -252,35 +262,51 @@ const MainPagesNavbar = () => {
             <li className=""><Link to ="/">Home</Link></li>
 
             {userRole === "admin" && (
-            <li className="jobsDropdownWrapper d-flex justify-content-center DropdownWrapper">
-              <Link to ="" >Jobs<span className='icon'><ArrowDropDownIcon/></span></Link>
-              <ul className="jobsDropdownMenu dropdown" >
-                <Link to="jobsearch"><li>Job Search</li></Link>
-                <Link to="post-job"><li>Add an Opportunity</li></Link>
-              </ul>
-            </li>)}
+            <li
+            className="jobsDropdownWrapper d-flex justify-content-center DropdownWrapper"
+            onMouseEnter={() => setHoveredDropdown('jobs')}
+            onMouseLeave={() => setHoveredDropdown(null)}
+          >
+            <Link to="#" className={`${hoveredDropdown === 'jobs' ? 'setActive' : ''}`}>Jobs<span className="icon"><ArrowDropDownIcon /></span></Link>
+          
+            <ul className={`jobsDropdownMenu dropdown ${hoveredDropdown === 'jobs' ? 'show' : ''}`}>
+              <li><Link to="jobsearch">Job Search</Link></li>
+              <li><Link to="post-job">Add an Opportunity</Link></li>
+            </ul>
+          </li>
+          )}
 
-            <li className="communityDropdownWrapper d-flex justify-content-center DropdownWrapper">
-              <Link to ="" >Community<span className='icon'><ArrowDropDownIcon/></span></Link>
-              <ul className="communityDropdownMenu dropdown" >
-                <Link to="yearbook"><li>Yearbook</li></Link>
-                <Link to="chapters"><li>Chapters</li></Link>
-                <Link to="map"><li>Map</li></Link>
+            <li
+              className="communityDropdownWrapper d-flex justify-content-center DropdownWrapper"
+              onMouseEnter={() => setHoveredDropdown('community')}
+              onMouseLeave={() => setHoveredDropdown(null)}
+            >
+              <Link to="#" className={`${hoveredDropdown === 'community' ? 'setActive' : ''}`}>Community<span className='icon'><ArrowDropDownIcon /></span></Link>
+
+              <ul className={`communityDropdownMenu dropdown ${hoveredDropdown === 'community' ? 'show' : ''}`}>
+                <li><Link to="yearbook">Yearbook</Link></li>
+                <li><Link to="chapters">Chapters</Link></li>
+                <li><Link to="map">Map</Link></li>
               </ul>
             </li>
 
-            <li className="eventsDropdownWrapper d-flex justify-content-center DropdownWrapper">
-              <Link to ="" >   Events   <span className='icon'><ArrowDropDownIcon/></span></Link>
-              <ul className="eventsDropdownMenu dropdown">
+
+            <li className="eventsDropdownWrapper d-flex justify-content-center DropdownWrapper"
+             onMouseEnter={() => setHoveredDropdown('events')}
+             onMouseLeave={() => setHoveredDropdown(null)}>
+              <Link to ="" className={`${hoveredDropdown === 'events' ? 'setActive' : ''}`} >   Events   <span className='icon'><ArrowDropDownIcon/></span></Link>
+              <ul className={`eventsDropdownMenu dropdown  ${hoveredDropdown === 'events' ? 'show' : ''}`}>
                 <Link to=""><li>Alumni Events</li></Link>
                 <Link to="feed"><li>Campus Feed</li></Link>
                 <Link to="gallery"><li>Gallery</li></Link>
               </ul>
             </li>
 
-            <li className="aboutDropdownWrapper d-flex justify-content-center DropdownWrapper">
+            <li className="aboutDropdownWrapper d-flex justify-content-center DropdownWrapper"
+             onMouseEnter={() => setHoveredDropdown('about')}
+             onMouseLeave={() => setHoveredDropdown(null)}>
               <Link to ="" >   About   <span className='icon'><ArrowDropDownIcon/></span></Link>
-              <ul className="aboutDropdownMenu dropdown">
+              <ul className={`aboutDropdownMenu dropdown  ${hoveredDropdown === 'about' ? 'show' : ''}`}>
                 <Link to="ourstory"><li>Our Story</li></Link>
                 <Link to="team"><li>Team</li></Link>
                 <Link to="career"><li>Career</li></Link>
